@@ -8,7 +8,25 @@
   border: 1px solid #eee ;
   transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   color: #000 ;
-  max-width: 300px;
+  width: 300px;
+  // min-width: 300px;
+  
+  .card__overlay {
+    content: " ";
+    height: 140px;
+    width: 100%;
+    display: block;
+    position: relative;
+    background-image: url(https://cdn.shopify.com/s/files/1/0758/3005/products/A3_DAY_ArtPrint_1200x.jpg?v=1605692196);
+    background-size: cover;
+    border-radius: 12px 12px 2px 2px;
+    background-position: 50% 50%;
+    
+    .badge {
+      padding: 20px;
+    }
+  }
+  
 }
 
 .card-body {
@@ -31,7 +49,7 @@
   overflow: hidden;
 }
 
-.card-img-overlay {
+.card__overlay {
   content: " ";
   height: 140px;
   width: 100%;
@@ -42,10 +60,3 @@
   border-radius: 12px 12px 2px 2px;
   background-position: 50% 50%;
 }
-
-// .--card-smooth-caption, .card-img-overlay {
-//   position: absolute;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-// }

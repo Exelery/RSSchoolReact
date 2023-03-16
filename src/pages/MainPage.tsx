@@ -1,13 +1,21 @@
 import React from 'react';
 import SearchBar from '../components/SearchBar';
 import Card from '../components/Card';
+import Header from '../components/Header';
+import { data } from '../data';
+import '../styles/mainPage.scss';
 
 export default function MainPage() {
   return (
-    <div>
+    <div className="mainPage">
+      <Header title="MainPage" />
       <h1>This is the home page</h1>
       <SearchBar />
-      <Card />
+      <div className="cards">
+        {data.map((item) => (
+          <Card item={item} key={item.id} />
+        ))}
+      </div>
     </div>
   );
 }

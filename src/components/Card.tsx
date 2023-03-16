@@ -1,27 +1,41 @@
 import React from 'react';
 import '../styles/card.scss';
 
-export default function Card() {
+type IItem = {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+  stock: number;
+  brand: string;
+  category: string;
+  thumbnail: string;
+  images: string[];
+};
+
+export default function Card(props: { item: IItem }) {
   return (
-    <div className="card border-0 three">
+    <div className="card">
       <div className="position-relative">
-        <div className="card-img-overlay two">
-          <span className="badge badge-light text-uppercase">FASHION</span>
+        <div
+          className="card__overlay"
+          // style={{ 'background-image': 'url(' + props.item.images[0] + ')' }}
+        >
+          <div className="badge">{props.item.title}</div>
         </div>
       </div>
-      <div className="card-body two">
-        <h5 className="card-title">Fashion today</h5>
-        <h6 className="card-subtitle mb-2 text-muted">January 16 2023</h6>
-        <p className="card-text mt-4">
-          Minim dolor in amet nulla laboris enim dolore consequat proident fugiat culpa eiusmod
-          proident sed excepteur excepteur magna irure ex officia ea sunt in incididunt.
-        </p>
+      <div className="card-body">
+        <h5 className="card-title">{props.item.brand}</h5>
+        <h6 className="card-subtitle">{props.item.price} $</h6>
+        <p className="card-text">{props.item.description}</p>
       </div>
       <div className="card-footer">
         <div className="media align-items-center">
           <div className="media-body">
-            <a className="card-link text-primary read-more" href="javascript://">
-              Read More
+            <a className="card-link text-primary read-more" href="">
+              Buy
             </a>
           </div>
 
