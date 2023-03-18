@@ -19,11 +19,8 @@ export default function Card(props: { item: IItem }) {
   return (
     <div className="card hover:bg-sky-600 transition-all">
       <div className="position-relative">
-        <div
-          className="card__overlay"
-          // style={{ 'background-image': 'url(' + props.item.images[0] + ')' }}
-        >
-          <div className="badge">{props.item.title}</div>
+        <div className="card__overlay" style={{ backgroundImage: `url(${props.item.images[0]})` }}>
+          <div className="badge ">{props.item.title}</div>
         </div>
       </div>
       <div className="card-body">
