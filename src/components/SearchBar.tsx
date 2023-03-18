@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/searchbar.scss';
-// import Zoom from './zoom';
 
 export default class SearchBar extends React.Component<object, { value: string }> {
   constructor(props: object) {
@@ -36,8 +35,6 @@ export default class SearchBar extends React.Component<object, { value: string }
   render() {
     return (
       <div className="search">
-        {/* <h1>{this.constructor.name}</h1> */}
-
         <input
           type="text"
           className="searchTerm"
@@ -46,8 +43,8 @@ export default class SearchBar extends React.Component<object, { value: string }
           placeholder={'What are you looking for?'}
           onChange={this.handleChange}
         />
-        <button type="submit" className="searchButton">
-          {/* {<Zoom />} */}
+        <button type="submit" className="searchButton bg-sky-600 ">
+          ✎
         </button>
       </div>
     );

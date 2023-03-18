@@ -17,7 +17,7 @@ type IItem = {
 
 export default function Card(props: { item: IItem }) {
   return (
-    <div className="card">
+    <div className="card hover:bg-sky-600 transition-all">
       <div className="position-relative">
         <div
           className="card__overlay"

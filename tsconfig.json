@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "lib": ["dom", "esnext", "dom.iterable"],
+    "types": ["node", "@testing-library/jest-dom"],
     "jsx": "react",
     "module": "esnext",
     "moduleResolution": "node",
@@ -15,6 +16,6 @@
     "baseUrl": "./src",
     "resolveJsonModule": true
   },
-  "include": ["src"],
+  "include": ["src", "./setupTest.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

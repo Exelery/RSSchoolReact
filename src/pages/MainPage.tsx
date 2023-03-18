@@ -10,6 +10,7 @@ export default function MainPage() {
     <div className="mainPage">
       <Header title="MainPage" />
       <h1>This is the home page</h1>
+      <div className="text-3xl font-bold hover:bg-sky-500">test</div>
       <SearchBar />
       <div className="cards">
         {data.map((item) => (
