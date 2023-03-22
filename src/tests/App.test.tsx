@@ -4,7 +4,7 @@ import App from '../App';
 import React from 'react';
 import MainPage from '../pages/MainPage';
 import AboutPage from '../pages/AboutPage';
-import Card from '../components/Card';
+import Card from '../components/CardNew';
 import { data } from '../data';
 
 describe('Renders main pages correctly', async () => {
