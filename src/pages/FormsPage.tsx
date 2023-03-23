@@ -1,10 +1,12 @@
-import React, { ChangeEventHandler, FormEvent } from 'react';
+import React, { FormEvent, Ref, RefAttributes } from 'react';
 import Header from '../components/Header';
 import '../styles/forms.scss';
 import { validFileType } from '../utils';
 import ErrorMessage from '../components/ErrorMessage';
-import { IItem } from '../utils/types';
+import { IItem, Itags } from '../utils/types';
 import CardsList from '../components/CardsList';
+import Tags from '../components/form/Tags';
+import MySelect from '../components/form/Select';
 
 export default class FormsPage extends React.Component<
   object,
@@ -16,12 +18,12 @@ export default class FormsPage extends React.Component<
     errorCheckboxField: boolean;
     errorFileInput: boolean;
     errorDatePicker: boolean;
+    errorTags: boolean;
     items: IItem[];
     id: number;
   }
 > {
   textInput: React.RefObject<HTMLInputElement>;
-  checkboxField: React.RefObject<HTMLDivElement>;
   menCheck: React.RefObject<HTMLInputElement>;
   womenCheck: React.RefObject<HTMLInputElement>;
   tagHome: React.RefObject<HTMLInputElement>;
@@ -44,10 +46,10 @@ export default class FormsPage extends React.Component<
       errorCheckboxField: false,
       errorFileInput: false,
       errorDatePicker: false,
+      errorTags: false,
       id: 0,
     };
     this.textInput = React.createRef();
-    this.checkboxField = React.createRef();
     this.menCheck = React.createRef();
     this.womenCheck = React.createRef();
 
@@ -78,17 +80,14 @@ export default class FormsPage extends React.Component<
       this.setState({ errorDatePicker: !this.datePicker.current.value });
       this.setState({ errorFileInput: !this.fileInput.current.value });
       if (this.fileInput.current.files) {
-        if (validFileType(this.fileInput.current.files[0])) {
+        if (this.fileInput.current.files[0] && validFileType(this.fileInput.current.files[0])) {
           const objectURL = window.URL.createObjectURL(this.fileInput.current.files[0]);
           this.setState({ img: objectURL, imgName: this.fileInput.current.files[0].name });
         } else {
-          // this.setState((prev) => ({ errorFileInput: true }));
           this.setState({ errorFileInput: true });
-          // this.setState({ errorFileInput: true });
         }
       }
-      // console.log(this.getGender());
-      // console.log('tags', this.getTags());
+      console.log('tags', this.getTags());
       if (
         !(
           !this.textInput.current.value ||
@@ -112,7 +111,7 @@ export default class FormsPage extends React.Component<
             },
           ],
         });
-        this.setState({ id: this.state.id + 1 });
+        this.setState((prev) => ({ id: prev.id + 1 }));
         // this.form.current.reset();
       }
     }
@@ -138,6 +137,7 @@ export default class FormsPage extends React.Component<
       this.tagStyle.current.checked ? tags.push(this.tagStyle.current.value) : '';
       this.tagLife.current.checked ? tags.push(this.tagLife.current.value) : '';
       this.tagBussines.current.checked ? tags.push(this.tagBussines.current.value) : '';
+      this.setState({ errorTags: tags.length === 0 });
       return tags;
     }
   }
@@ -151,6 +151,7 @@ export default class FormsPage extends React.Component<
       <div className="Forms">
         <Header title="Forms" />
         <form
+          noValidate
           className="flex flex-col items-center space-y-3"
           onSubmit={(e) => this.submitForm(e)}
           ref={this.form}
@@ -166,40 +167,25 @@ export default class FormsPage extends React.Component<
                 name="title"
                 id=""
                 ref={this.textInput}
-                className={
-                  'border-2 font-bold py-2 px-4 rounded-full focus:outline-none ' +
-                  this.borderColor(this.state.errorTextInput)
-                }
+                className={`border-2 font-bold py-2 px-4 rounded-full focus:outline-none
+                  ${this.borderColor(this.state.errorTextInput)}`}
               />
               <ErrorMessage error={this.state.errorTextInput} />
             </div>
           </div>
-          <div className="flex gap-3" ref={this.checkboxField}>
-            <div className="tag home">
-              <label>
-                <input type="checkbox" name="tags" id="" value="home" ref={this.tagHome} />
-                <span> #Home</span>
-              </label>
-            </div>
-            <div className="tag home">
-              <label>
-                <input type="checkbox" name="tags" id="" value="life" ref={this.tagLife} />
-                <span> #Life</span>
-              </label>
-            </div>
-            <div className="tag home">
-              <label>
-                <input type="checkbox" name="tags" id="" value="bussines" ref={this.tagBussines} />
-                <span> #Bussines</span>
-              </label>
-            </div>
-            <div className="tag home">
-              <label>
-                <input type="checkbox" name="tags" id="" value="style" ref={this.tagStyle} />
-                <span> #Style</span>
-              </label>
-            </div>
-          </div>
+
+          <Tags
+            isError={this.state.errorTags}
+            style={this.borderColor(this.state.errorTags)}
+            ref={
+              {
+                tagStyle: this.tagStyle,
+                tagBussines: this.tagBussines,
+                tagLife: this.tagLife,
+                tagHome: this.tagHome,
+              } as unknown as Ref<Itags>
+            }
+          />
 
           <div className="switch-field">
             <input
@@ -224,10 +210,9 @@ export default class FormsPage extends React.Component<
           <div className="flex flex-col fileInputField gap-1">
             <label
               htmlFor="fileInput"
-              className={
-                'cursor-pointer border-2 font-bold py-2 px-4 rounded-full focus:outline-none ' +
-                this.borderColor(this.state.errorFileInput)
-              }
+              className={`cursor-pointer border-2 font-bold py-2 px-4 rounded-full focus:outline-none ${this.borderColor(
+                this.state.errorFileInput
+              )}`}
             >
               {this.state.imgName ? this.state.imgName : 'Upload image (PNG, JPG)'}
             </label>
@@ -245,35 +230,16 @@ export default class FormsPage extends React.Component<
               type="date"
               name=""
               id="date"
-              className={
-                'border-2 rounded-full cursor-pointer p-1 ' +
-                this.borderColor(this.state.errorDatePicker)
-              }
+              className={`border-2 rounded-full cursor-pointer p-1 
+              ${this.borderColor(this.state.errorDatePicker)}`}
             />
             <ErrorMessage error={this.state.errorDatePicker} />
           </div>
-          <div>
-            <label htmlFor="select">Выберите ваш любимый вкус:</label>
-            <select
-              defaultValue={''}
-              id="select"
-              ref={this.select}
-              className={
-                'cursor-pointer border-blue-500 border-2 font-bold py-1 px-4 rounded-full focus:outline-none ' +
-                this.borderColor(this.state.errorSelect)
-              }
-            >
-              <option value="" disabled hidden>
-                Choose here
-              </option>
-              <option value="grapefruit">Грейпфрут</option>
-              <option value="lime">Лайм</option>
-              <option value="coconut">Кокос</option>
-              <option value="mango">Манго</option>
-            </select>
-            <ErrorMessage error={this.state.errorSelect} />
-          </div>
-
+          <MySelect
+            ref={this.select}
+            style={this.borderColor(this.state.errorSelect)}
+            isError={this.state.errorSelect}
+          />
           <button
             type="submit"
             className="bg-blue-500 hover:bg-blue-700 w-40 text-white font-bold py-2 px-4 rounded-full"
