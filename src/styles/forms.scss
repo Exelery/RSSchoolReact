@@ -70,7 +70,7 @@
   overflow: hidden;
 }
 
-.switch-field label {
+.switch-field span {
 display: inline-block;
 width: 100px;
 font-size: 14px;
@@ -78,26 +78,26 @@ font-weight: normal;
 text-align: center;
 text-shadow: none;
 padding: 6px 14px;
-border: 1px solid rgb(59 130 246);
+// border: 1px solid rgb(59 130 246);
 transition: all 0.1s ease-in-out;
 }
 
-.switch-field label:hover {
-cursor: pointer;
-}
+// .switch-field span:hover {
+// cursor: pointer;
+// }
 
-.switch-field input:checked + label {
+.switch-field input:checked + span {
 background-color: #1E40AF;
 color: white;
 box-shadow: none;
 }
 
-.switch-field label:first-of-type {
+.switch-field label:first-of-type  span{
 border-radius: 9999px 0 0 9999px;;
 }
 
 
-.switch-field label:last-of-type {
+.switch-field label:last-of-type span {
 border-radius: 0 9999px 9999px 0;
 }
 
@@ -110,9 +110,6 @@ border-radius: 0 9999px 9999px 0;
   overflow: hidden;
 }
 
-.fileInputField label {
-  
-}
 
 .error {
   border-color: red;

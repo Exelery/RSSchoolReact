@@ -3,16 +3,15 @@ import { Itags } from '../../utils/types';
 import ErrorMessage from '../ErrorMessage';
 
 const Tags = React.forwardRef<Itags, { isError: boolean; style: string }>((props, ref) => {
-  const { tagStyle, tagBussines, tagLife, tagHome } = ref as unknown as Itags;
-  const refs = [tagHome, tagLife, tagBussines, tagStyle];
-  const tags = ['home', 'life', 'bussines', 'style'];
+  const { tags } = ref as unknown as Itags;
+  const tagsMap = ['home', 'life', 'bussines', 'style'];
   return (
     <div>
       <div className="flex gap-3">
-        {tags.map((el, index) => (
-          <div className={`tag ${el}`} key={el}>
+        {tagsMap.map((el, index) => (
+          <div className={`tag`} key={el}>
             <label>
-              <input type="checkbox" name="tags" value={el} ref={refs[index]} />
+              <input type="checkbox" name="tags" value={el} ref={tags[index]} />
               <span className={`${props.style}`}> #{el[0].toUpperCase() + el.slice(1)}</span>
             </label>
           </div>

@@ -9,8 +9,5 @@ export type IItem = {
 };
 
 export type Itags = {
-  tagHome: React.RefObject<HTMLInputElement>;
-  tagStyle: React.RefObject<HTMLInputElement>;
-  tagBussines: React.RefObject<HTMLInputElement>;
-  tagLife: React.RefObject<HTMLInputElement>;
+  tags: React.RefObject<HTMLInputElement>[];
 };
