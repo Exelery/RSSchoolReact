@@ -11,7 +11,7 @@ const Tags = React.forwardRef<Itags, ITagProps>(({ isError, style, tagsArr }, re
   const { tags } = ref as unknown as Itags;
   return (
     <div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 flex-wrap">
         {tagsArr.map((el, index) => (
           <div className={`tag`} key={el}>
             <label>

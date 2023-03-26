@@ -145,7 +145,7 @@ export default class FormComponent extends React.Component<
       >
         <div>
           <legend>Create new post</legend>
-          <div>
+          <div className="flex flex-col items-start">
             <label htmlFor="title">Title</label>
             <input
               autoFocus
@@ -199,7 +199,7 @@ export default class FormComponent extends React.Component<
           />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="date">Выберите дату</label>
+          <label htmlFor="date">Choose the date</label>
           <input
             ref={this.datePicker}
             type="date"
@@ -219,7 +219,7 @@ export default class FormComponent extends React.Component<
           type="submit"
           className="bg-blue-500 hover:bg-blue-700 w-40 text-white font-bold py-2 px-4 rounded-full"
         >
-          Фокус
+          Create
         </button>
       </form>
     );

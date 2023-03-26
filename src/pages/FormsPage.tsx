@@ -27,9 +27,9 @@ export default class FormsPage extends React.Component<
 
   render() {
     return (
-      <div>
+      <div className="w-full">
         <Header title="Forms" />
-        <div className="Forms grid grid-cols-5 h-[100%] m-4 gap-x-2">
+        <div className="Forms flex md:flex-wrap m-8 gap-8">
           <FormComponent addCard={this.addCard} />
           <CardsList items={this.state.items} />
         </div>

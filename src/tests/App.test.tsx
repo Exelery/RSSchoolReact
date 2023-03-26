@@ -30,14 +30,12 @@ describe('Renders main pages correctly', async () => {
 describe('Cards', async () => {
   it('Should check the card is exist', async () => {
     render(<Card item={data[0]} key={data[0].id} />);
-    // console.log(screen);
     expect(screen.getByText(/iPhone 9/i)).toBeInTheDocument();
   });
 });
 
 describe('Check Routing', async () => {
   it('Should check the 404 page  exist', async () => {
-    // const history = createMemoryHistory();
     render(
       <MemoryRouter initialEntries={['/users/2']}>
         <App />

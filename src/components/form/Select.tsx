@@ -3,11 +3,12 @@ import ErrorMessage from '../ErrorMessage';
 
 const MySelect = React.forwardRef<HTMLSelectElement, { style: string; isError: boolean }>(
   (props, ref) => {
+    const values = ['Grapefruit', 'Lime', 'Coconut', 'Mango'];
     return (
-      <div>
-        <label htmlFor="select">Выберите ваш любимый вкус:</label>
+      <div className="flex flex-col items-start">
+        <label htmlFor="select">Choose your favorit</label>
         <select
-          defaultValue={''}
+          defaultValue=""
           id="select"
           ref={ref}
           className={`cursor-pointer border-blue-500 border-2 font-bold
@@ -16,10 +17,11 @@ const MySelect = React.forwardRef<HTMLSelectElement, { style: string; isError: b
           <option value="" disabled hidden>
             Choose here
           </option>
-          <option value="grapefruit">Грейпфрут</option>
-          <option value="lime">Лайм</option>
-          <option value="coconut">Кокос</option>
-          <option value="mango">Манго</option>
+          {values.map((el) => (
+            <option value={el} key={el}>
+              {el}
+            </option>
+          ))}
         </select>
         <ErrorMessage error={props.isError} />
       </div>
