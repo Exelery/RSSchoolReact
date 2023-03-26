@@ -28,14 +28,12 @@ export default class FormComponent extends React.Component<
   datePicker: React.RefObject<HTMLInputElement>;
   form: React.RefObject<HTMLFormElement>;
   addCard: (item: IItem) => void;
-  reader: FileReader;
   id: number;
+  tagsArr: string[];
 
   constructor(props: { addCard: (item: IItem) => void }) {
     super(props);
     this.addCard = props.addCard;
-    this.reader = new FileReader();
-    this.reader.onloadend = this.updateName;
     this.state = {
       img: '',
       imgName: 'Upload image (PNG, JPG)',
@@ -47,11 +45,10 @@ export default class FormComponent extends React.Component<
       errorTags: false,
       errorRadio: false,
     };
+    this.tagsArr = ['home', 'life', 'bussines', 'style'];
     this.textInput = React.createRef();
     this.radioBtns = React.createRef();
-    this.tags = Array(4)
-      .fill(0)
-      .map(() => React.createRef());
+    this.tags = this.tagsArr.map(() => React.createRef());
     this.fileInput = React.createRef();
     this.datePicker = React.createRef();
     this.select = React.createRef();
@@ -59,28 +56,13 @@ export default class FormComponent extends React.Component<
     this.id = 0;
   }
 
-  updateName(e: ProgressEvent<FileReader>) {
-    console.log('test');
-    if (this.fileInput.current && this.fileInput.current.files) {
-      const objectURL = window.URL.createObjectURL(this.fileInput.current.files[0]);
-      this.setState({ img: objectURL, imgName: this.fileInput.current.files[0].name });
-      // imagePreviewRef.current.src = e.target.result;
-    }
-  }
-
   handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files) {
-      // const file = event.target.files[0];
-      // const reader = new FileReader();
       if (this.fileInput.current && this.fileInput.current.files) {
         const objectURL = window.URL.createObjectURL(this.fileInput.current.files[0]);
         this.setState({ img: objectURL, imgName: this.fileInput.current.files[0].name });
-        // imagePreviewRef.current.src = e.target.result;
       }
     }
-
-    // Update selected file state
-    // Create a new FileReader
   };
 
   borderColor(bool: boolean) {
@@ -115,10 +97,11 @@ export default class FormComponent extends React.Component<
           !this.textInput.current.value ||
           !this.select.current.value ||
           !this.datePicker.current.value ||
-          !this.fileInput.current.value
+          !this.fileInput.current.value ||
+          !this.radioBtns.current?.getValue() ||
+          this.getTags().length === 0
         ) &&
-        this.fileInput.current.files &&
-        this.form.current
+        this.fileInput.current.files
       ) {
         const item = {
           id: this.id++,
@@ -130,9 +113,15 @@ export default class FormComponent extends React.Component<
           image: window.URL.createObjectURL(this.fileInput.current.files[0]),
         };
         this.addCard(item);
-        this.form.current.reset();
-        this.setState({ img: '', imgName: 'Upload image (PNG, JPG)' });
+        this.cleanForm();
       }
+    }
+  }
+
+  cleanForm() {
+    if (this.form.current) {
+      this.form.current.reset();
+      this.setState({ img: '', imgName: 'Upload image (PNG, JPG)' });
     }
   }
 
@@ -148,7 +137,7 @@ export default class FormComponent extends React.Component<
     return (
       <form
         noValidate
-        className="flex flex-col items-center space-y-3"
+        className="col-span-1 min-w-300 flex flex-col items-center space-y-3"
         ref={this.form}
         onSubmit={(e) => {
           this.submitForm(e);
@@ -174,6 +163,7 @@ export default class FormComponent extends React.Component<
         <Tags
           isError={this.state.errorTags}
           style={this.borderColor(this.state.errorTags)}
+          tagsArr={this.tagsArr}
           ref={
             {
               tags: this.tags,

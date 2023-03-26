@@ -1,13 +1,10 @@
 import React from 'react';
+import { ErrorProps } from '../utils/types';
 
-interface Props {
-  error: boolean;
-}
-
-export default function WarningBanner({ error }: Props) {
+export default function WarningBanner({ error, children }: ErrorProps) {
   if (!error) {
     return null;
   }
 
-  return <div className="warning text-red-500">Предупреждение!</div>;
+  return <div className="warning text-red-500">{children ? children : 'Warning!'}</div>;
 }

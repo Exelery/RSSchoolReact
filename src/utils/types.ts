@@ -11,3 +11,8 @@ export type IItem = {
 export type Itags = {
   tags: React.RefObject<HTMLInputElement>[];
 };
+
+export interface ErrorProps {
+  error: boolean;
+  children?: React.ReactNode;
+}

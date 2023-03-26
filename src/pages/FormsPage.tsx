@@ -27,10 +27,12 @@ export default class FormsPage extends React.Component<
 
   render() {
     return (
-      <div className="Forms">
+      <div>
         <Header title="Forms" />
-        <FormComponent addCard={this.addCard} />
-        <CardsList items={this.state.items} />
+        <div className="Forms grid grid-cols-5 h-[100%] m-4 gap-x-2">
+          <FormComponent addCard={this.addCard} />
+          <CardsList items={this.state.items} />
+        </div>
       </div>
     );
   }

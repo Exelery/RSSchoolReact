@@ -36,7 +36,7 @@ export default class RadioBtns extends React.Component<IRadiProps> {
             <span className={`solid border-[1px] cursor-pointer ${this.props.style}`}>{el}</span>
           </label>
         ))}
-        <ErrorMessage error={this.props.isError} />
+        <ErrorMessage error={this.props.isError}> Select one option! </ErrorMessage>
       </div>
     );
   }
