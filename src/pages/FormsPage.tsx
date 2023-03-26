@@ -9,24 +9,20 @@ export default class FormsPage extends React.Component<
   object,
   {
     items: IItem[];
-    id: number;
   }
 > {
   constructor(props: object) {
     super(props);
     this.state = {
       items: [],
-      id: 0,
     };
     this.addCard = this.addCard.bind(this);
   }
 
   addCard(item: IItem) {
-    item.id = this.state.id;
     this.setState({
       items: [...this.state.items, item],
     });
-    this.setState((prev) => ({ id: prev.id + 1 }));
   }
 
   render() {

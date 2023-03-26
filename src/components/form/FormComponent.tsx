@@ -1,4 +1,4 @@
-import React, { FormEvent, Ref } from 'react';
+import React, { ChangeEventHandler, FormEvent, Ref } from 'react';
 import { validFileType } from '../../utils';
 import { IItem, Itags } from '../../utils/types';
 import ErrorMessage from '../ErrorMessage';
@@ -28,14 +28,17 @@ export default class FormComponent extends React.Component<
   datePicker: React.RefObject<HTMLInputElement>;
   form: React.RefObject<HTMLFormElement>;
   addCard: (item: IItem) => void;
+  reader: FileReader;
+  id: number;
 
   constructor(props: { addCard: (item: IItem) => void }) {
     super(props);
     this.addCard = props.addCard;
-
+    this.reader = new FileReader();
+    this.reader.onloadend = this.updateName;
     this.state = {
       img: '',
-      imgName: '',
+      imgName: 'Upload image (PNG, JPG)',
       errorSelect: false,
       errorTextInput: false,
       errorCheckboxField: false,
@@ -45,7 +48,6 @@ export default class FormComponent extends React.Component<
       errorRadio: false,
     };
     this.textInput = React.createRef();
-    // this.menCheck = React.createRef();
     this.radioBtns = React.createRef();
     this.tags = Array(4)
       .fill(0)
@@ -54,7 +56,32 @@ export default class FormComponent extends React.Component<
     this.datePicker = React.createRef();
     this.select = React.createRef();
     this.form = React.createRef();
+    this.id = 0;
   }
+
+  updateName(e: ProgressEvent<FileReader>) {
+    console.log('test');
+    if (this.fileInput.current && this.fileInput.current.files) {
+      const objectURL = window.URL.createObjectURL(this.fileInput.current.files[0]);
+      this.setState({ img: objectURL, imgName: this.fileInput.current.files[0].name });
+      // imagePreviewRef.current.src = e.target.result;
+    }
+  }
+
+  handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files) {
+      // const file = event.target.files[0];
+      // const reader = new FileReader();
+      if (this.fileInput.current && this.fileInput.current.files) {
+        const objectURL = window.URL.createObjectURL(this.fileInput.current.files[0]);
+        this.setState({ img: objectURL, imgName: this.fileInput.current.files[0].name });
+        // imagePreviewRef.current.src = e.target.result;
+      }
+    }
+
+    // Update selected file state
+    // Create a new FileReader
+  };
 
   borderColor(bool: boolean) {
     return bool ? 'border-red-600 hover:border-red-700' : 'border-blue-500 hover:border-blue-700';
@@ -75,14 +102,14 @@ export default class FormComponent extends React.Component<
       this.setState({ errorRadio: !this.radioBtns.current?.getValue() });
       this.setState({ errorTags: this.getTags().length === 0 });
 
-      if (this.fileInput.current.files) {
-        if (this.fileInput.current.files[0] && validFileType(this.fileInput.current.files[0])) {
-          const objectURL = window.URL.createObjectURL(this.fileInput.current.files[0]);
-          this.setState({ img: objectURL, imgName: this.fileInput.current.files[0].name });
-        } else {
-          this.setState({ errorFileInput: true });
-        }
+      if (
+        !this.fileInput.current.files ||
+        !this.fileInput.current.files[0] ||
+        !validFileType(this.fileInput.current.files[0])
+      ) {
+        this.setState({ errorFileInput: true });
       }
+
       if (
         !(
           !this.textInput.current.value ||
@@ -90,10 +117,11 @@ export default class FormComponent extends React.Component<
           !this.datePicker.current.value ||
           !this.fileInput.current.value
         ) &&
-        this.fileInput.current.files
+        this.fileInput.current.files &&
+        this.form.current
       ) {
         const item = {
-          id: 0,
+          id: this.id++,
           date: this.datePicker.current.value,
           gender: this.radioBtns.current?.getValue() || '',
           title: this.textInput.current.value,
@@ -102,7 +130,8 @@ export default class FormComponent extends React.Component<
           image: window.URL.createObjectURL(this.fileInput.current.files[0]),
         };
         this.addCard(item);
-        // this.form.current.reset();
+        this.form.current.reset();
+        this.setState({ img: '', imgName: 'Upload image (PNG, JPG)' });
       }
     }
   }
@@ -164,14 +193,20 @@ export default class FormComponent extends React.Component<
               this.state.errorFileInput
             )}`}
           >
-            {this.state.imgName ? this.state.imgName : 'Upload image (PNG, JPG)'}
+            {this.state.imgName}
           </label>
-          <input type="file" id="fileInput" accept="image/*" ref={this.fileInput} />
+          <input
+            type="file"
+            id="fileInput"
+            accept="image/*"
+            ref={this.fileInput}
+            onChange={this.handleFileChange}
+          />
           <ErrorMessage error={this.state.errorFileInput} />
-          {/* <img
-              src={this.state.img}
-              className={this.state.img ? 'w-72 object-contain h-auto max-h-72' : ''}
-            /> */}
+          <img
+            src={this.state.img}
+            className={this.state.img ? 'w-72 object-contain h-auto max-h-72' : ''}
+          />
         </div>
         <div className="flex flex-col">
           <label htmlFor="date">Выберите дату</label>
