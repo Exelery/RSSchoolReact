@@ -4,8 +4,9 @@ import App from '../App';
 import React from 'react';
 import MainPage from '../pages/MainPage';
 import AboutPage from '../pages/AboutPage';
-import Card from '../components/CardNew';
+import Card from '../components/Card';
 import { data } from '../data';
+import { validFileType } from '../utils';
 
 describe('Renders main pages correctly', async () => {
   it('Should render the MainPage', async () => {
@@ -43,5 +44,20 @@ describe('Check Routing', async () => {
       </MemoryRouter>
     );
     expect(screen.getByText(/This is the error page/i)).toBeInTheDocument();
+  });
+});
+
+describe('check utils', async () => {
+  it('Should validate type and return false', async () => {
+    const fileTxt = new File(['foo'], 'foo.txt', {
+      type: 'text/plain',
+    });
+    expect(validFileType(fileTxt)).toBe(false);
+  });
+  it('Should validate type and return true', async () => {
+    const fileImg = new File(['foo'], 'foo.txt', {
+      type: 'image/jpeg',
+    });
+    expect(validFileType(fileImg)).toBe(true);
   });
 });

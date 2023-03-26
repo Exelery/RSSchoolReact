@@ -27,7 +27,6 @@ export default class RadioBtns extends React.Component<IRadiProps> {
         {this.props.names.map((el, index) => (
           <label htmlFor={`switch_${el}`} key={el}>
             <input
-              // defaultChecked
               type="radio"
               id={`switch_${el}`}
               name="switchToggle"

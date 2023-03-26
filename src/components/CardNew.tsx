@@ -21,8 +21,6 @@ export default function newCard({ item }: IProps) {
             </div>
           ))}
         </div>
-
-        <p className="text-gray-700 text-base">{item.category}</p>
         <p className="text-gray-700 text-base">{item.rating}</p>
         <p className="text-gray-700 absolute bottom-2 left-2">{item.date}</p>
       </div>
