@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter, BrowserRouter } from 'react-router-dom';
 import App from '../App';
 import React from 'react';
@@ -7,6 +7,8 @@ import AboutPage from '../pages/AboutPage';
 import Card from '../components/Card';
 import { data } from '../data';
 import { validFileType } from '../utils';
+import CardsList from '../components/CardsList';
+import { IItem } from '../utils/types';
 
 describe('Renders main pages correctly', async () => {
   it('Should render the MainPage', async () => {
@@ -57,5 +59,44 @@ describe('check utils', async () => {
       type: 'image/jpeg',
     });
     expect(validFileType(fileImg)).toBe(true);
+  });
+});
+
+describe('check FormPage', async () => {
+  it('Should render form Page', async () => {
+    render(
+      <MemoryRouter initialEntries={['/forms']}>
+        <App />
+      </MemoryRouter>
+    );
+    expect(screen.getByText(/Create new post/i)).toBeInTheDocument();
+  });
+  it('should show error', async () => {
+    render(
+      <MemoryRouter initialEntries={['/forms']}>
+        <App />
+      </MemoryRouter>
+    );
+    const button = screen.getByRole('button');
+    fireEvent.click(button);
+    expect(screen.getAllByText(/Warning!/i)[0]).toBeInTheDocument();
+  });
+});
+
+describe('check newCards', async () => {
+  it('Should render correct card', async () => {
+    const item: IItem[] = [
+      {
+        id: 1,
+        date: '29.93.2002',
+        gender: 'man',
+        title: 'test',
+        rating: 'fruit',
+        category: ['busines'],
+        image: 'test',
+      },
+    ];
+    render(<CardsList items={item} />);
+    expect(screen.getByText(/man/i)).toBeInTheDocument();
   });
 });
