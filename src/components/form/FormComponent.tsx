@@ -113,7 +113,7 @@ export default class FormComponent extends React.Component<
           image: window.URL.createObjectURL(this.fileInput.current.files[0]),
         };
         this.addCard(item);
-        this.cleanForm();
+        // this.cleanForm();
       }
     }
   }
