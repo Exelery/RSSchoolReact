@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, FormEvent, Ref } from 'react';
+import React, { FormEvent, Ref } from 'react';
 import { validFileType } from '../../utils';
 import { IItem, Itags } from '../../utils/types';
 import ErrorMessage from '../ErrorMessage';
