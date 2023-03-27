@@ -1,9 +1,9 @@
 import React from 'react';
-import SearchBar from '../components/SearchBar';
-import Card from '../components/Card';
-import Header from '../components/Header';
-import { data } from '../data';
-import '../styles/mainPage.scss';
+import SearchBar from '@/components/SearchBar';
+import Card from '@/components/Card';
+import Header from '@/components/Header';
+import { data } from '@/data';
+import '@/styles/mainPage.scss';
 
 export default function MainPage() {
   return (
