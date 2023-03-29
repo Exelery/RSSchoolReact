@@ -11,7 +11,7 @@ export default function Header(props: { title: string }) {
       <nav className="header__links">
         {routes.map((el) => {
           if (el.path === '*') {
-            return <></>;
+            return null;
           }
           return (
             <NavLink to={el.path} className={setActive} key={el.name}>

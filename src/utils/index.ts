@@ -1,9 +1,9 @@
-const fileTypes = ['image/jpeg', 'image/pjpeg', 'image/png'];
+const fileTypes = ['image/jpeg', 'image/pjpeg', 'image/png', 'image/jpeg'];
 
 export function validFileType(file: File) {
-  if (file.type.startsWith('image')) {
-    return true;
-  }
+  return fileTypes.includes(file.type);
+}
 
-  return false;
+export function borderColor(bool: boolean) {
+  return bool ? 'border-red-600 hover:border-red-700' : 'border-blue-500 hover:border-blue-700';
 }
