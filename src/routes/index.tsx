@@ -1,9 +1,6 @@
 import React from 'react';
 
-import MainPage from '@/pages/MainPage';
-import AboutPage from '@/pages/AboutPage';
-import FormsPage from '../pages/FormsPage';
-import ErrorPage from '../pages/ErrorPage';
+import { MainPage, AboutPage, FormsPage, ErrorPage } from '@/pages';
 
 export default [
   {

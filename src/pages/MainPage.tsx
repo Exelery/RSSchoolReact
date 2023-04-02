@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 import { data } from '@/data';
 import '@/components/main/mainPage.scss';
 
-export default function MainPage() {
+export function MainPage() {
   return (
     <div className="mainPage">
       <Header title="MainPage" />

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
-import '../styles/forms.scss';
-import { IItem } from '../utils/types';
-import CardsList from '../components/CardsList';
-import FormComponent from '../components/form/FormComponent';
+import '@/styles/forms.scss';
+import { IItem } from '@/utils/types';
+import CardsList from '@/components/CardsList';
+import FormComponent from '@/components/form/FormComponent';
 
 export default function FormsPage() {
   const [items, setItems] = useState<IItem[]>([]);
