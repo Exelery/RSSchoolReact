@@ -11,6 +11,9 @@ export default function Header(props: { title: string }) {
         <NavLink to="/" className={setActive}>
           Home
         </NavLink>
+        <NavLink to="/forms" className={setActive}>
+          Forms
+        </NavLink>
         <NavLink to="/about" className={setActive}>
           About
         </NavLink>

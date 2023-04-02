@@ -14,22 +14,14 @@ export default defineConfig({
       enabled: true,
       provider: 'c8',
       include: ['src/**/*'],
-      exclude: ['src/components/Layout.tsx', 'src/vite-env.d.ts'],
+      exclude: [
+        'src/components/Layout.tsx',
+        'src/vite-env.d.ts',
+        'src/main.tsx',
+        'src/utils/types.ts',
+      ],
       all: true,
-      // lines: 80,
-      // functions: 80,
-      // branches: 80,
-      // statements: 80,
       reporter: ['text'],
     },
   },
 });
-
-// coverage: {
-//   enabled: true,
-//   provider: 'c8',
-//   reporter: ['text'],
-//   all: true,
-//  include: ['src//'],
-//  exclude: ['src/.{ts,tsx}'],
-// },
