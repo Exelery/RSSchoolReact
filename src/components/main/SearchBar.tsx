@@ -13,7 +13,6 @@ export default function SearchBar() {
   }, [value]);
 
   const saveToLocale = () => {
-    console.log('test2');
     localStorage.setItem('search', valueRef.current);
   };
 
