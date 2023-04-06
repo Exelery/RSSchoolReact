@@ -2,9 +2,8 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter, BrowserRouter } from 'react-router-dom';
 import App from '../App';
 import React from 'react';
-import MainPage from '../pages/MainPage';
-import AboutPage from '../pages/AboutPage';
-import Card from '../components/Card';
+import { MainPage, AboutPage } from '@/pages';
+import Card from '../components/main/Card';
 import { data } from '../data';
 import { validFileType } from '../utils';
 import CardsList from '../components/CardsList';
@@ -17,7 +16,7 @@ describe('Renders main pages correctly', async () => {
         <MainPage />
       </BrowserRouter>
     );
-    expect(screen.getByText(/MainPage/i)).toBeInTheDocument();
+    expect(screen.getByText(/This is the home page/i)).toBeInTheDocument();
   });
   it('Should render the AboutPage', async () => {
     render(
@@ -79,7 +78,7 @@ describe('check FormPage', async () => {
     );
     const button = screen.getByRole('button');
     fireEvent.click(button);
-    expect(screen.getAllByText(/Warning!/i)[0]).toBeInTheDocument();
+    expect(screen.getByText(/Choose here/i)).toBeInTheDocument();
   });
 });
 

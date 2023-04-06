@@ -1,29 +1,31 @@
 import React from 'react';
-import { Itags } from '../../utils/types';
+import { borderColor } from '../../utils';
+import { ITagProps } from '../../utils/types';
 import ErrorMessage from '../ErrorMessage';
 
-interface ITagProps {
-  isError: boolean;
-  style: string;
-  tagsArr: string[];
-}
-const Tags = React.forwardRef<Itags, ITagProps>(({ isError, style, tagsArr }, ref) => {
-  const { tags } = ref as unknown as Itags;
+export default function Tags({ register, error, values }: ITagProps) {
   return (
     <div>
       <div className="flex gap-3 flex-wrap">
-        {tagsArr.map((el, index) => (
+        {values.map((el) => (
           <div className={`tag`} key={el}>
             <label>
-              <input type="checkbox" name="tags" value={el} ref={tags[index]} />
-              <span className={`${style}`}> #{el[0].toUpperCase() + el.slice(1)}</span>
+              <input
+                type="checkbox"
+                id="check"
+                {...register('category', {
+                  required: 'Select at least one tag!',
+                })}
+                value={el}
+              />
+              <span className={`${borderColor(!!error)}`}>
+                #{el[0].toUpperCase() + el.slice(1)}
+              </span>
             </label>
           </div>
         ))}
       </div>
-      <ErrorMessage error={isError}> Select at least one tag! </ErrorMessage>
+      <ErrorMessage error={!!error}>{error?.message}</ErrorMessage>
     </div>
   );
-});
-
-export default Tags;
+}

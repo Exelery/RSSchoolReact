@@ -1,11 +1,11 @@
 import React from 'react';
-import SearchBar from '../components/SearchBar';
-import Card from '../components/Card';
-import Header from '../components/Header';
-import { data } from '../data';
-import '../styles/mainPage.scss';
+import SearchBar from '@/components/main/SearchBar';
+import Card from '@/components/main/Card';
+import Header from '@/components/Header';
+import { data } from '@/data';
+import '@/components/main/mainPage.scss';
 
-export default function MainPage() {
+export function MainPage() {
   return (
     <div className="mainPage">
       <Header title="MainPage" />

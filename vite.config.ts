@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitest/config';
+// import { resolve } from 'path';
 
 import react from '@vitejs/plugin-react';
 
@@ -6,6 +7,9 @@ import react from '@vitejs/plugin-react';
 // environment: 'happy-dom',
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: [{ find: '@', replacement: '/src' }],
+  },
   test: {
     globals: true,
     environment: 'jsdom',
