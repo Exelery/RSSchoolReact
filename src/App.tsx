@@ -3,8 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 import routes from './routes';
 
-// import Layout from './components/Layout';
-
 function App() {
   return (
     <div className="App">

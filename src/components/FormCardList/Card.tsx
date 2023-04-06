@@ -1,6 +1,5 @@
 import React from 'react';
-import '../styles/card.scss';
-import { IItem } from '../utils/types';
+import { IItem } from '@/utils/types';
 
 type IProps = {
   item: IItem;

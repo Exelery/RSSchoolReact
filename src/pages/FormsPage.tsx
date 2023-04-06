@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import '@/styles/forms.scss';
 import { IItem } from '@/utils/types';
-import CardsList from '@/components/CardsList';
-import FormComponent from '@/components/form/FormComponent';
-import Notification from '../components/form/Notification';
+import CardsList from '@/components/FormCardList/CardsList';
+import FormComponent from '@/components/Form';
+import { Notification } from '../components/Form';
 
 export default function FormsPage() {
   const [items, setItems] = useState<IItem[]>([]);

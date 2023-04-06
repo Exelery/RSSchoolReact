@@ -1,6 +1,6 @@
 import React from 'react';
-import CardNew from './CardNew';
-import { IItem } from '../utils/types';
+import Card from './Card';
+import { IItem } from '@/utils/types';
 
 export default function CardsList({ items }: { items: IItem[] }) {
   if (items.length === 0) {
@@ -13,7 +13,7 @@ export default function CardsList({ items }: { items: IItem[] }) {
   return (
     <div className="card-list flex flex-wrap gap-5 my-4 col-span-4">
       {items.map((item) => (
-        <CardNew item={item} key={item.id} />
+        <Card item={item} key={item.id} />
       ))}
     </div>
   );

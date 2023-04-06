@@ -30,7 +30,12 @@
   },
   "include": [
     "src",
-    "./setupTest.ts"
+    "./setupTest.ts",
+    "custom.d.ts",
+    "setupTests/mockServer.ts",
+    "setupTests/mockServer.ts",
+    "setupTests/mock.ts",
+    "setupTests/mock.ts"
   ],
   "references": [
     {

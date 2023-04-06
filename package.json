@@ -16,10 +16,13 @@
   "dependencies": {
     "@testing-library/user-event": "^14.4.3",
     "@types/testing-library__jest-dom": "^5.14.5",
+    "cross-fetch": "^3.1.5",
+    "msw": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.8",
-    "react-router-dom": "^6.9.0"
+    "react-router-dom": "^6.9.0",
+    "vite-plugin-svgr": "^2.4.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -41,6 +44,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "happy-dom": "^8.9.0",
     "husky": "^7.0.4",
+    "jsdom": "^21.1.1",
     "lint-staged": "^12.4.1",
     "path": "^0.12.7",
     "postcss": "^8.4.21",
@@ -51,7 +55,9 @@
     "tsconfig-paths": "^4.1.2",
     "typescript": "^4.9.3",
     "vite": "^4.1.0-beta.1",
-    "vitest": "^0.29.3",
-    "jsdom": "^21.1.1"
+    "vitest": "^0.29.3"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

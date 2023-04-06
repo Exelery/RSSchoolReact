@@ -1,13 +1,11 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter, BrowserRouter } from 'react-router-dom';
-import App from '../App';
+import App from '@/App';
 import React from 'react';
 import { MainPage, AboutPage } from '@/pages';
-import Card from '../components/main/Card';
-import { data } from '../data';
-import { validFileType } from '../utils';
-import CardsList from '../components/CardsList';
-import { IItem } from '../utils/types';
+import { validFileType } from '@/utils';
+import CardsList from '@/components/FormCardList/CardsList';
+import { IItem } from '@/utils/types';
 
 describe('Renders main pages correctly', async () => {
   it('Should render the MainPage', async () => {
@@ -25,13 +23,6 @@ describe('Renders main pages correctly', async () => {
       </BrowserRouter>
     );
     expect(screen.getByRole('heading')).toHaveTextContent('This is the about page');
-  });
-});
-
-describe('Cards', async () => {
-  it('Should check the card is exist', async () => {
-    render(<Card item={data[0]} key={data[0].id} />);
-    expect(screen.getByText(/iPhone 9/i)).toBeInTheDocument();
   });
 });
 
