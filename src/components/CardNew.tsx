@@ -7,11 +7,10 @@ type IProps = {
 };
 
 export default function newCard({ item }: IProps) {
-  // console.log(item);
   return (
     <div className="bg-white border-2 border-blue-500 rounded-lg overflow-hidden flex flex-col w-80 h-80 flex-wrap relative">
-      <div className="px-4 py-4">
-        <img src={item.image} className={item.image ? 'w-72 object-contain h-auto max-h-72' : ''} />
+      <div className="px-4 py-2">
+        <img src={item.image} className={item.image ? 'w-72 object-contain h-auto max-h-40' : ''} />
         <div className="font-bold text-lg mb-2">{item.title}</div>
         <p className="text-gray-700">{item.gender}</p>
         <div className="flex gap-2 justify-center">
