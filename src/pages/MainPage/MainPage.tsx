@@ -16,15 +16,10 @@ export function MainPage() {
     setloaderVisible(false);
   }, []);
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, [fetchData]);
-
   return (
     <div className="mainPage">
       <Header title="MainPage" />
       <h1>This is the home page</h1>
-      {/* <div className="text-3xl font-bold hover:bg-sky-500">test</div> */}
       <SearchBar fetchData={fetchData} />
       <CardsList items={apiResult} loaderVisible={loaderVisible} />
     </div>
