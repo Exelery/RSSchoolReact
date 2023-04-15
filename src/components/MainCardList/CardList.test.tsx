@@ -1,7 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import CardsList from './CardsList';
 import React from 'react';
-import { mockCharacters } from '../../../setupTests/mock';
+import { mockCharacters } from '../../setupTests/mock';
 
 describe('Renders cards correctly', async () => {
   it('Should render the Cards', async () => {

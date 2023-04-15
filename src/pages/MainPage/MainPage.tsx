@@ -7,21 +7,21 @@ import { ICharacter } from '@/api/types';
 import CardsList from '@/components/MainCardList/CardsList';
 
 export function MainPage() {
-  const [apiResult, setApiResult] = useState<ICharacter[]>([]);
-  const [loaderVisible, setloaderVisible] = useState(false);
+  // const [apiResult, setApiResult] = useState<ICharacter[]>([]);
+  // const [loaderVisible, setloaderVisible] = useState(false);
 
-  const fetchData = useCallback(async (value = '') => {
-    setloaderVisible(true);
-    setApiResult(await getCharacters(value));
-    setloaderVisible(false);
-  }, []);
+  // const fetchData = useCallback(async (value = '') => {
+  //   setloaderVisible(true);
+  //   setApiResult(await getCharacters(value));
+  //   setloaderVisible(false);
+  // }, []);
 
   return (
     <div className="mainPage">
       <Header title="MainPage" />
       <h1>This is the home page</h1>
-      <SearchBar fetchData={fetchData} />
-      <CardsList items={apiResult} loaderVisible={loaderVisible} />
+      <SearchBar />
+      <CardsList />
     </div>
   );
 }

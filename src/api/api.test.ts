@@ -1,6 +1,6 @@
 import { describe, expect } from 'vitest';
 import { getCharacterById, getCharacters } from './api';
-import { mockCharacters, Morty, Summer } from '../../setupTests/mock';
+import { mockCharacters, Morty, Summer } from '../setupTests/mock';
 // import fetch from 'cross-fetch';
 
 describe('getCharacters', () => {

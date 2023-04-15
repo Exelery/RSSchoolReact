@@ -1,17 +1,21 @@
 import React from 'react';
 import { validFileType, borderColor } from '../../utils';
-import { IFormInput, IFormProps } from '../../utils/types';
+import { IFormInput } from '../../utils/types';
 import ErrorMessage from '../ErrorMessage';
 import RadioBtns from './RadioBtns';
 import MySelect from './Select';
 import Tags from './Tags';
 import { useForm, SubmitHandler } from 'react-hook-form';
+// import { useDispatch } from 'react-redux';
+
+import { addItem } from '@/store/formSlice';
+import { useAppDispatch } from '../../store/hook';
 
 const tagsArr = ['home', 'life', 'bussines', 'style'];
 const radioArr = ['men', 'women'];
 const selectArr = ['Grapefruit', 'Lime', 'Coconut', 'Mango'];
 
-export default function FormComponent({ addCard }: IFormProps) {
+export default function FormComponent() {
   const {
     register,
     handleSubmit,
@@ -23,10 +27,18 @@ export default function FormComponent({ addCard }: IFormProps) {
     reValidateMode: 'onSubmit',
     defaultValues: { rating: '' },
   });
+  const dispatch = useAppDispatch();
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    addCard({ ...data, image: window.URL.createObjectURL(data.image[0]), id: 0 });
+    dispatch(
+      addItem({
+        ...data,
+        image: window.URL.createObjectURL(data.image[0]),
+        id: Date.now().toString(),
+      })
+    );
     reset();
   };
+
   const watchFileUpload = watch('image');
 
   return (

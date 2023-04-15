@@ -1,4 +1,4 @@
-import { mockCharacters, info } from 'setupTests/mock';
+import { mockCharacters, info } from '@/setupTests/mock';
 import { rest } from 'msw';
 
 export const handlers = [

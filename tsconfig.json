@@ -32,10 +32,10 @@
     "src",
     "./setupTest.ts",
     "custom.d.ts",
-    "setupTests/mockServer.ts",
-    "setupTests/mockServer.ts",
-    "setupTests/mock.ts",
-    "setupTests/mock.ts"
+    "src/setupTests/mockServer.ts",
+    "src/setupTests/mockServer.ts",
+    "src/setupTests/mock.ts",
+    "src/setupTests/mock.ts"
   ],
   "references": [
     {

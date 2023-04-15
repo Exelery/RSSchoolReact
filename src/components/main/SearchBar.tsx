@@ -1,39 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useAppDispatch, useAppSelector } from '@/store/hook';
+import { changeSearchValue } from '../../store/searchSlice';
 
-export default function SearchBar({ fetchData }: { fetchData: (value?: string) => void }) {
-  const [value, setValue] = useState(localStorage.getItem('search') || '');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const target = e.target as HTMLInputElement;
-    setValue(target.value);
-  };
-
-  const saveToLocale = () => {
-    localStorage.setItem('search', value);
-  };
-
-  useEffect(() => {
-    fetchData(value);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+export default function SearchBar() {
+  const dispatch = useAppDispatch();
+  const searchRef = useRef<HTMLInputElement>(null);
 
   function startSearch(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const input = e.currentTarget.elements.namedItem('search') as HTMLInputElement;
-    fetchData(input.value);
-    saveToLocale();
+    const target = e.currentTarget.elements.namedItem('search') as HTMLInputElement;
+    dispatch(changeSearchValue({ value: target.value }));
+    // fetchData(target.value);
+    // saveToLocale();
   }
 
   return (
     <form className="search" onSubmit={startSearch}>
       <input
+        ref={searchRef}
         name="search"
         type="text"
         className="searchTerm"
         key="searchBar"
-        value={value}
         placeholder={'What are you looking for?'}
-        onChange={handleChange}
+        defaultValue={useAppSelector((state) => state.search.value)}
       />
       <button type="submit" className="searchButton bg-sky-600 ">
         ✎
