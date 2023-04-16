@@ -8,7 +8,6 @@ type Props = {
 };
 
 export default function ModalContent({ character, onClose }: Props) {
-  console.log('test');
   if (character) {
     return (
       <div role="modalContent" className="w-1/2 h 1/2 bg-white relative">

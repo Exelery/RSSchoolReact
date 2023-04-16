@@ -1,7 +1,7 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import ModalContent from './ModalContent';
-import { Loader } from '@/components/Loader';
+import Loader from '@/components/Loader';
 
 import { useGetCharByIdQuery } from '../../store/rtkApi';
 
@@ -11,9 +11,7 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ id, onClose }) => {
-  const { data, isLoading, isError } = useGetCharByIdQuery(id);
-  // console.log(data);
-  // const [trigger, { data, isLoading, isError, error }, lastPromiseInfo] = useLazyGetCharByIdQuery();
+  const { data, isLoading } = useGetCharByIdQuery(id);
 
   function clickHandler(e: React.MouseEvent<HTMLDivElement>) {
     if (e.target === e.currentTarget) {
@@ -21,7 +19,6 @@ const Modal: React.FC<ModalProps> = ({ id, onClose }) => {
     }
   }
 
-  console.log(data);
   return ReactDOM.createPortal(
     <div
       className="fixed top-0 left-0 z-[1055] h-full w-full

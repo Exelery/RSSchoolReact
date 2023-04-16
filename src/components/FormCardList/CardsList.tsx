@@ -3,7 +3,6 @@ import Card from './Card';
 import { useAppSelector } from '../../store/hook';
 
 export default function CardsList() {
-  // { items }: { items: IItem[] }
   const items = useAppSelector((state) => state.form.items);
   if (items.length === 0) {
     return (

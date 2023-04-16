@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import '@/styles/forms.scss';
 import CardsList from '@/components/FormCardList/CardsList';
-import FormComponent from '@/components/Form';
-import { Notification } from '../components/Form';
+import FormComponent, { Notification } from '@/components/Form';
 
-export default function FormsPage() {
+export function FormsPage() {
   const [notificationVisible, setNotificationVisible] = useState(false);
 
   let timer: ReturnType<typeof setTimeout> | undefined = undefined;
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   function showNotification() {
     if (timer) clearTimeout(timer);
     setNotificationVisible(true);

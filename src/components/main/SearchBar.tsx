@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { useAppDispatch, useAppSelector } from '@/store/hook';
 import { changeSearchValue } from '../../store/searchSlice';
 

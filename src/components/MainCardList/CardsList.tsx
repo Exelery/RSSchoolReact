@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Card from './Card';
 import Modal from '../Modal/Modal';
-import { Loader } from '../Loader';
+import Loader from '../Loader';
 import { useGetCharsQuery } from '@/store/rtkApi';
 import { useAppSelector } from '../../store/hook';
 

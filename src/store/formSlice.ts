@@ -10,8 +10,6 @@ const formSlice = createSlice({
   },
   reducers: {
     addItem(state, action: PayloadAction<IItem>) {
-      console.log('state', state);
-      console.log('action', action);
       state.items.push(action.payload);
     },
   },

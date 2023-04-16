@@ -1,4 +1,4 @@
-export { default as AboutPage } from './AboutPage';
-export { default as ErrorPage } from './ErrorPage';
-export { default as FormsPage } from './FormsPage';
-export { MainPage } from './MainPage/MainPage';
+export { AboutPage } from './AboutPage';
+export { ErrorPage } from './ErrorPage';
+export { FormsPage } from './FormsPage';
+export { MainPage } from './MainPage';

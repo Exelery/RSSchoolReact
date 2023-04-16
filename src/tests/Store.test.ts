@@ -1,5 +1,5 @@
-import searchReducer, { changeSearchValue } from './searchSlice';
-import formReducer, { addItem } from './formSlice';
+import searchReducer, { changeSearchValue } from '@/store/searchSlice';
+import formReducer, { addItem } from '@/store/formSlice';
 import { formItem } from '@/tests/mockData';
 
 describe('redux selectors', () => {
@@ -28,8 +28,7 @@ describe('test formSlice', () => {
   it('should add new item', () => {
     const action = { type: addItem.type, payload: formItem };
     const result = formReducer({ items: [] }, action);
-    console.log(result);
-    console.log(result.items);
+
     expect(result.items[0].title).toBe(formItem.title);
   });
 });

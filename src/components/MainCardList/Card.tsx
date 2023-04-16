@@ -4,7 +4,7 @@ import { ICharacter } from '@/api/types';
 
 export default function Card({ item, onClick }: { item: ICharacter; onClick: () => void }) {
   return (
-    <div className="card hover:bg-sky-600 transition-all" onClick={onClick}>
+    <div className="card hover:bg-sky-600 transition-all" onClick={onClick} role="card">
       <div className="position-relative">
         <div className="card__overlay" style={{ backgroundImage: `url(${item.image})` }} />
       </div>

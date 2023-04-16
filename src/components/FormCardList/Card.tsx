@@ -6,7 +6,6 @@ type IProps = {
 };
 
 export default function newCard({ item }: IProps) {
-  // console.log(item);
   return (
     <div className="bg-white border-2 border-blue-500 rounded-lg overflow-hidden flex flex-col w-80 h-80 flex-wrap relative">
       <div className="px-4 py-4">

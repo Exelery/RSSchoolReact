@@ -1,7 +1,7 @@
 import Header from '../components/Header';
 import React from 'react';
 
-export default function AboutPage() {
+export function AboutPage() {
   return (
     <div>
       <Header title="AboutPage" />

@@ -12,7 +12,7 @@ export const DEFAULT_WAI_ARIA_ATTRIBUTE = {
   role: 'status',
 };
 
-export const TailSpin: React.FC<TailSpinProps> = ({
+const Loader: React.FC<TailSpinProps> = ({
   height = 80,
   width = 80,
   strokeWidth = 2,
@@ -82,4 +82,4 @@ export const TailSpin: React.FC<TailSpinProps> = ({
   );
 };
 
-export default TailSpin;
+export default Loader;

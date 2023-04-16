@@ -15,8 +15,7 @@ export const handlers = [
       response = { error: 'There is nothing here' };
       status = 404;
     }
-
-    return res(ctx.delay(1500), ctx.status(status, 'Mocked status'), ctx.json(response));
+    return res(ctx.status(status, 'Mocked status'), ctx.json(response)); // ctx.delay(1500),
   }),
 
   rest.get('https://rickandmortyapi.com/api/character/:userId', (req, res, ctx) => {
@@ -36,6 +35,6 @@ export const handlers = [
         status = 404;
       }
     }
-    return res(ctx.delay(1500), ctx.status(status, 'Mocked status'), ctx.json(response));
+    return res(ctx.status(status, 'Mocked status'), ctx.json(response)); // ctx.delay(1500),
   }),
 ];
