@@ -75,18 +75,7 @@ describe('check FormPage', async () => {
 
 describe('check newCards', async () => {
   it('Should render correct card', async () => {
-    const item: IItem[] = [
-      {
-        id: 1,
-        date: '29.93.2002',
-        gender: 'man',
-        title: 'test',
-        rating: 'fruit',
-        category: ['busines'],
-        image: 'test',
-      },
-    ];
-    render(<CardsList items={item} />);
+    render(<CardsList />);
     expect(screen.getByText(/man/i)).toBeInTheDocument();
   });
 });

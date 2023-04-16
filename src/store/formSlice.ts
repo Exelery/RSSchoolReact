@@ -14,9 +14,8 @@ const formSlice = createSlice({
       console.log('action', action);
       state.items.push(action.payload);
     },
-    removeItem(state, action) {},
   },
 });
 
-export const { addItem, removeItem } = formSlice.actions;
+export const { addItem } = formSlice.actions;
 export default formSlice.reducer;
