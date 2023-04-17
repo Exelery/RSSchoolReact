@@ -10,4 +10,14 @@ const formItem: IItem = {
   image: 'test',
 };
 
-export { formItem };
+const formItem2 = {
+  gender: 'string',
+  date: 'string',
+  title: 'string',
+  rating: 'string',
+  category: ['a'],
+  id: 'ese',
+  image: 'sese',
+};
+const formItems: IItem[] = [formItem, formItem2];
+export { formItem, formItem2, formItems };
