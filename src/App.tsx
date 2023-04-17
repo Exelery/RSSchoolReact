@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Routes>
         {routes.map((el) => (
-          <Route path={el.path} element={el.element} key={el.name} />
+          <Route path={el.path} element={el.element()} key={el.name} />
         ))}
       </Routes>
     </div>

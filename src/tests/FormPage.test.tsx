@@ -2,7 +2,7 @@ import React from 'react';
 import { describe, it } from 'vitest';
 import { fireEvent, screen } from '@testing-library/react';
 import { renderWithProviders } from '@/setupTests/testUtils';
-import FormComponent from '../components/Form/FormComponent';
+import FormComponent from '@/components/Form';
 
 describe('check FormPage', async () => {
   it('should show error', async () => {
