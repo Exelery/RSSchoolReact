@@ -41,5 +41,9 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ]
+  ],
+  "ts-node": {
+    "esm": true, // «———— enabling ESM for ts-node  
+    "transpileOnly": true, 
+  }, 
 }

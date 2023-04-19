@@ -1,23 +1,33 @@
 {
   "name": "vite-react-typescript-starter",
   "private": true,
-  "version": "0.0.0",
+  "main": "index.js",
   "type": "module",
+  "exports": {
+    "import": "./dist/redux-toolkit.esm.mjs",
+    "require": "./dist/index.js"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "ts-node server.ts",
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.tsx",
+    "build": "npm run build:client && npm run build:server",
+    "generate": "vite build --outDir dist/static && npm run build:server && node prerender",
+    "serve": "NODE_ENV=production node server"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/user-event": "^14.4.3",
     "@types/testing-library__jest-dom": "^5.14.5",
+    "compression": "^1.7.4",
     "cross-fetch": "^3.1.5",
+    "express": "^4.18.2",
     "msw": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -25,11 +35,16 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.9.0",
     "redux": "^4.2.1",
+    "ts-node": "^10.9.1",
     "vite-plugin-svgr": "^2.4.0"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^5.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
+    "@types/compression": "^1.7.2",
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.11",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
