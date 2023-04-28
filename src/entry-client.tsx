@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './index.css';
+import routes from './routes';
 
-ReactDOM.hydrateRoot(
-  document.getElementById('root') as HTMLElement,
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+hydrate();
 
-console.log('hydrated');
+async function hydrate() {
+  const router = createBrowserRouter(routes);
+
+  ReactDOM.hydrateRoot(
+    document.getElementById('root') as HTMLElement,
+    <RouterProvider router={router} />
+  );
+
+  console.log('hydrated');
+}

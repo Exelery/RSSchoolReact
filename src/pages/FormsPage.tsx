@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
 import '@/styles/forms.scss';
 import CardsList from '@/components/FormCardList/CardsList';
 import FormComponent, { Notification } from '@/components/Form';
@@ -20,7 +19,6 @@ export function FormsPage() {
 
   return (
     <div className="w-full">
-      <Header title="Forms" />
       <div className="Forms flex md:flex-wrap m-8 gap-8">
         <FormComponent />
         <CardsList />

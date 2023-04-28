@@ -1,14 +1,22 @@
 import { defineConfig } from 'vitest/config';
+import istanbul from 'vite-plugin-istanbul';
+
 // import { resolve } from 'path';
 
 import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
-import path from 'path';
 
 // https://vitejs.dev/config/
 // environment: 'happy-dom',
 export default defineConfig({
-  plugins: [react(), svgr()],
+  plugins: [
+    react(),
+    svgr(),
+    istanbul({
+      cypress: true,
+      requireEnv: false,
+    }),
+  ],
   // root: 'src',
   build: {
     minify: false,

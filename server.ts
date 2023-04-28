@@ -1,4 +1,5 @@
-import fs from 'node:fs';
+import fsp from 'fs/promises';
+
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
@@ -11,12 +12,9 @@ process.env.MY_CUSTOM_SECRET = 'API_KEY_qwertyuiop';
 
 export async function createServer(
   root = process.cwd(),
-  isProd = process.env.NODE_ENV === 'production',
-  hmrPort
+  isProd = process.env.NODE_ENV === 'production'
 ) {
-  const resolve = (p) => path.resolve(__dirname, p);
-
-  const indexProd = isProd ? fs.readFileSync(resolve('dist/client/index.html'), 'utf-8') : '';
+  const resolve = (p: string) => path.resolve(__dirname, p);
 
   const app = express();
 
@@ -33,26 +31,16 @@ export async function createServer(
       server: {
         middlewareMode: true,
         watch: {
-          // During tests we edit the files too fast and sometimes chokidar
-          // misses change events, so enforce polling for consistency
           usePolling: true,
           interval: 100,
-        },
-        hmr: {
-          port: hmrPort,
         },
       },
       appType: 'custom',
     });
-    // use vite's connect instance as middleware
     app.use(vite.middlewares);
   } else {
     app.use((await import('compression')).default());
-    app.use(
-      (await import('serve-static')).default(resolve('dist/client'), {
-        index: false,
-      })
-    );
+    app.use(express.static(resolve('dist/client')));
   }
 
   app.use('*', async (req, res) => {
@@ -60,26 +48,44 @@ export async function createServer(
       const url = req.originalUrl;
       let template, render;
       if (!isProd) {
-        // always read fresh template in dev
-        template = fs.readFileSync(resolve('index.html'), 'utf-8');
+        template = await fsp.readFile(resolve('index.html'), 'utf8');
         template = await vite.transformIndexHtml(url, template);
-        render = (await vite.ssrLoadModule('/src/entry-server.tsx')).render;
+        render = await vite.ssrLoadModule('src/entry-server.tsx').then((m) => m.render);
       } else {
-        template = indexProd;
+        template = await fsp.readFile(resolve('dist/client/index.html'), 'utf8');
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         render = (await import('./dist/server/entry-server.js')).render;
       }
+      try {
+        const html = template.split(`<!--app-html-->`);
 
-      const context = {};
-      const appHtml = render(url, context);
-
-      // if (context.url) {
-      //   // Somewhere a `<Redirect>` was rendered
-      //   return res.redirect(301, context.url);
-      // }
-
-      const html = template.replace(`<!--app-html-->`, appHtml);
-      console.log('res');
-      res.status(200).set({ 'Content-Type': 'text/html' }).end(html);
+        res.status(200);
+        res.setHeader('Content-Type', 'text/html');
+        res.write(html[0]);
+        const stream = await render(req, {
+          onShellReady() {
+            stream.pipe(res);
+          },
+          onShellError() {
+            res.status(500);
+            res.setHeader('content-type', 'text/html');
+            res.send('<h1>Something went wrong</h1>');
+          },
+          onAllReady() {
+            res.write(html[1]);
+            res.end();
+          },
+          onError(err) {
+            console.error(err);
+          },
+        });
+      } catch (e) {
+        if (e instanceof Response && e.status >= 300 && e.status <= 399) {
+          return res.redirect(e.status, e.headers.get('Location') || ' ');
+        }
+        throw e;
+      }
     } catch (e) {
       !isProd && vite.ssrFixStacktrace(e);
       console.log(e.stack);
@@ -92,8 +98,8 @@ export async function createServer(
 
 if (!isTest) {
   createServer().then(({ app }) =>
-    app.listen(5173, () => {
-      console.log('http://localhost:5173');
+    app.listen(PORT, () => {
+      console.log(`http://localhost:${PORT}`);
     })
   );
 }

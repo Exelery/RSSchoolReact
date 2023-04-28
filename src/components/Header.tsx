@@ -1,15 +1,19 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import '@/styles/header.scss';
-import routes from '@/routes';
+import { routerPaths } from '@/routes';
 
-export default function Header(props: { title: string }) {
+export default function Header() {
+  const route = useLocation();
+  const name = routerPaths.find((el) => el.path === route.pathname)?.name || ' ';
+
   const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
+
   return (
     <header className="header">
-      <div className="name">{props.title} </div>
+      <div className="name">{name}</div>
       <nav className="header__links">
-        {routes.map((el) => {
+        {routerPaths.map((el) => {
           if (el.path === '*') {
             return null;
           }

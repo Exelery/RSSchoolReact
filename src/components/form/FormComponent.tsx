@@ -6,7 +6,6 @@ import RadioBtns from './RadioBtns';
 import MySelect from './Select';
 import Tags from './Tags';
 import { useForm, SubmitHandler } from 'react-hook-form';
-// import { useDispatch } from 'react-redux';
 
 import { addItem } from '@/store/formSlice';
 import { useAppDispatch } from '../../store/hook';
@@ -52,6 +51,7 @@ export default function FormComponent() {
         <div className="flex flex-col items-start">
           <label htmlFor="title">Title</label>
           <input
+            data-test="input-title"
             autoFocus
             type="text"
             placeholder="Input title"

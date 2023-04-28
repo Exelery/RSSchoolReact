@@ -19,7 +19,15 @@
     "build:server": "vite build --outDir dist/server --ssr src/entry-server.tsx",
     "build": "npm run build:client && npm run build:server",
     "generate": "vite build --outDir dist/static && npm run build:server && node prerender",
-    "serve": "NODE_ENV=production node server"
+    "serve": "NODE_ENV=production node server",
+    "start": "nodemon -e ts,tsx --exec ts-node server.ts",
+    "cy:open-e2e": "cypress open --e2e --browser chrome",
+    "cy:open-unit": "cypress open --component --browser chrome",
+    "cy:run-e2e": " cypress run --e2e",
+    "cy:run-unit": "cypress run --component",
+    "cy:e2e": "start-server-and-test start http-get://127.0.0.1:5173 cy:open-e2e",
+    "cy:run-e2e-server": "start-server-and-test start http-get://127.0.0.1:5173 cy:run-e2e",
+    "cover:report": "nyc report --reporter=lcov --reporter=text"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
@@ -39,6 +47,8 @@
     "vite-plugin-svgr": "^2.4.0"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.10.4",
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@rollup/plugin-alias": "^5.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -53,6 +63,7 @@
     "@vitest/coverage-c8": "^0.29.3",
     "@vitest/coverage-istanbul": "^0.29.3",
     "autoprefixer": "^10.4.14",
+    "cypress": "^12.10.0",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -64,15 +75,18 @@
     "husky": "^7.0.4",
     "jsdom": "^21.1.1",
     "lint-staged": "^12.4.1",
+    "nodemon": "^2.0.22",
     "path": "^0.12.7",
     "postcss": "^8.4.21",
     "prettier": "^2.6.2",
     "sass": "^1.59.2",
     "scss": "^0.2.4",
+    "start-server-and-test": "^2.0.0",
     "tailwindcss": "^3.2.7",
     "tsconfig-paths": "^4.1.2",
     "typescript": "^4.9.3",
     "vite": "^4.1.0-beta.1",
+    "vite-plugin-istanbul": "^4.0.1",
     "vitest": "^0.29.3"
   },
   "msw": {

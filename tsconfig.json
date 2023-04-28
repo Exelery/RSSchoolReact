@@ -46,4 +46,5 @@
     "esm": true, // «———— enabling ESM for ts-node  
     "transpileOnly": true, 
   }, 
+  // "outDir": "./distTs"
 }

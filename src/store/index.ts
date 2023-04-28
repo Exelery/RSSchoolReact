@@ -2,6 +2,12 @@ import { PreloadedState, combineReducers, configureStore } from '@reduxjs/toolki
 import formReducer from './formSlice';
 import searchReducer from './searchSlice';
 import { charApi } from './rtkApi';
+
+// import * as toolkitReact from '@reduxjs/toolkit/query/react';
+// import * as toolkitRaw from '@reduxjs/toolkit';
+// const { createSlice } = toolkitRaw.default ?? toolkitRaw;
+// const { createApi, fetchBaseQuery } = toolkitReact.default ?? toolkitReact;
+// пока здесь полежит
 const reducer = combineReducers({
   form: formReducer,
   search: searchReducer,

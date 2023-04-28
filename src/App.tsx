@@ -1,18 +1,17 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import React from 'react';
-import routes from './routes';
 import store from './store';
 import { Provider } from 'react-redux';
+import Header from './components/Header';
 
 function App() {
   return (
     <Provider store={store}>
-      <Routes>
-        {routes.map((el) => (
-          <Route path={el.path} element={el.element()} key={el.name} />
-        ))}
-      </Routes>
+      <>
+        <Header />
+        <Outlet />
+      </>
     </Provider>
   );
 }
