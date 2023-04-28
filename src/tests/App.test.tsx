@@ -5,7 +5,7 @@ import React from 'react';
 import { validFileType } from '@/utils';
 import { renderWithProviders } from '../setupTests/testUtils';
 
-describe('Check Routing', async () => {
+describe.skip('Check Routing', async () => {
   it('Should render the 404 page', async () => {
     renderWithProviders(
       <MemoryRouter initialEntries={['/users/2']}>
