@@ -20,6 +20,7 @@ describe('check search and cards', () => {
     const text = 'rick';
     cy.get('.searchTerm').type(text);
     cy.get('.searchButton').click();
+    cy.wait(2000);
     cy.get('.card .badge').each(($el) => {
       console.log($el);
       cy.wrap($el)
