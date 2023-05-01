@@ -39,6 +39,8 @@ export default defineConfig({
         'src/main.tsx',
         'src/setupTests/*',
         'src/tests/*',
+        'src/entry-client.tsx',
+        'src/entry-server.tsx',
       ],
       all: true,
       reporter: ['text'],
