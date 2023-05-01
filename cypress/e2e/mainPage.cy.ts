@@ -36,7 +36,7 @@ describe('check search and cards', () => {
     cy.get('h3').contains('No cards');
   });
 
-  it.only('should show correct modal', () => {
+  it('should show correct modal', () => {
     cy.get('.card')
       .eq(0)
       .then(($card) => {

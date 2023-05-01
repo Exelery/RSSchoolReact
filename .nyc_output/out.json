@@ -6164,7 +6164,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "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",
+      "mappings": "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",
       "names": [
         "validFileType",
         "borderColor",
@@ -6223,7 +6223,7 @@
       "file": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/components/Form/FormComponent.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "81cdf16d807a5128869bc9b5a0d1bd4e7d192e85"
+    "hash": "734d05ce93fa2572ba265dd72df68b733396071e"
   },
   "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/components/Form/index.ts": {
     "path": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/components/Form/index.ts",
@@ -7006,7 +7006,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AAuBQ;;;;;;;;;;;;;;;;AAvBR,SAAgBA,gBAAgB;AAEhC,OAAO;AACP,OAAOC,eAAe;AACtB,OAAOC,iBAAiBC,oBAAoB;AAErC,gBAASC,YAAY;AAAAC;AAC1B,QAAM,CAACC,qBAAqBC,sBAAsB,IAAIP,SAAS,KAAK;AAEpE,MAAIQ,QAAmDC;AAGvD,WAASC,mBAAmB;AAC1B,QAAIF;AAAOG,mBAAaH,KAAK;AAC7BD,2BAAuB,IAAI;AAC3BC,YAAQI,WAAW,MAAM;AACvBL,6BAAuB,KAAK;AAAA,IAC9B,GAAG,GAAI;AAAA,EACT;AAEA,SACE,uBAAC,SAAI,WAAU,UACb,iCAAC,SAAI,WAAU,qCACb;AAAA,2BAAC,mBAAD;AAAA;AAAA;AAAA;AAAA,WAAc;AAAA,IACd,uBAAC,eAAD;AAAA;AAAA;AAAA;AAAA,WAAU;AAAA,IACTD,sBAAsB,uBAAC,gBAAa,SAAQ,gBAAtB;AAAA;AAAA;AAAA;AAAA,WAAkC,IAAM;AAAA,OAHjE;AAAA;AAAA;AAAA;AAAA,SAIA,KALF;AAAA;AAAA;AAAA;AAAA,SAMA;AAEJ;AAACD,GAvBeD,WAAS;AAAAS,KAATT;AAAS;AAAAU",
+      "mappings": "AAsBQ;;;;;;;;;;;;;;;;AAtBR,SAAgBA,gBAAgB;AAChC,OAAO;AACP,OAAOC,eAAe;AACtB,OAAOC,iBAAiBC,oBAAoB;AAErC,gBAASC,YAAY;AAAAC;AAC1B,QAAM,CAACC,qBAAqBC,sBAAsB,IAAIP,SAAS,KAAK;AAEpE,MAAIQ,QAAmDC;AAGvD,WAASC,mBAAmB;AAC1B,QAAIF;AAAOG,mBAAaH,KAAK;AAC7BD,2BAAuB,IAAI;AAC3BC,YAAQI,WAAW,MAAM;AACvBL,6BAAuB,KAAK;AAAA,IAC9B,GAAG,GAAI;AAAA,EACT;AAEA,SACE,uBAAC,SAAI,WAAU,UACb,iCAAC,SAAI,WAAU,qCACb;AAAA,2BAAC,mBAAD;AAAA;AAAA;AAAA;AAAA,WAAc;AAAA,IACd,uBAAC,eAAD;AAAA;AAAA;AAAA;AAAA,WAAU;AAAA,IACTD,sBAAsB,uBAAC,gBAAa,SAAQ,gBAAtB;AAAA;AAAA;AAAA;AAAA,WAAkC,IAAM;AAAA,OAHjE;AAAA;AAAA;AAAA;AAAA,SAIA,KALF;AAAA;AAAA;AAAA;AAAA,SAMA;AAEJ;AAACD,GAvBeD,WAAS;AAAAS,KAATT;AAAS;AAAAU",
       "names": [
         "useState",
         "CardsList",
@@ -7030,7 +7030,7 @@
       "file": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/pages/FormsPage.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "720c7069b8de5c0e541d61d8d4b044fa22b65bae"
+    "hash": "44fcf3dc56c9448265e2b92b3632e1acfce47e2f"
   },
   "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/store/searchSlice.ts": {
     "path": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/store/searchSlice.ts",
@@ -10024,51 +10024,51 @@
     "statementMap": {
       "0": {
         "start": {
-          "line": 5,
+          "line": 2,
           "column": 23
         },
         "end": {
-          "line": 17,
+          "line": 14,
           "column": 2
         }
       },
       "1": {
         "start": {
-          "line": 9,
+          "line": 6,
           "column": 25
         },
         "end": {
-          "line": 16,
+          "line": 13,
           "column": 3
         }
       },
       "2": {
         "start": {
-          "line": 11,
+          "line": 8,
           "column": 23
         },
         "end": {
-          "line": 11,
+          "line": 8,
           "column": 50
         }
       },
       "3": {
         "start": {
-          "line": 14,
+          "line": 11,
           "column": 21
         },
         "end": {
-          "line": 14,
+          "line": 11,
           "column": 28
         }
       },
       "4": {
         "start": {
-          "line": 18,
+          "line": 15,
           "column": 82
         },
         "end": {
-          "line": 18,
+          "line": 15,
           "column": 89
         }
       }
@@ -10078,84 +10078,84 @@
         "name": "(anonymous_0)",
         "decl": {
           "start": {
-            "line": 9,
+            "line": 6,
             "column": 13
           },
           "end": {
-            "line": 9,
+            "line": 6,
             "column": 14
           }
         },
         "loc": {
           "start": {
-            "line": 9,
+            "line": 6,
             "column": 25
           },
           "end": {
-            "line": 16,
+            "line": 13,
             "column": 3
           }
         },
-        "line": 9
+        "line": 6
       },
       "1": {
         "name": "(anonymous_1)",
         "decl": {
           "start": {
-            "line": 11,
+            "line": 8,
             "column": 13
           },
           "end": {
-            "line": 11,
+            "line": 8,
             "column": 14
           }
         },
         "loc": {
           "start": {
-            "line": 11,
+            "line": 8,
             "column": 23
           },
           "end": {
-            "line": 11,
+            "line": 8,
             "column": 50
           }
         },
-        "line": 11
+        "line": 8
       },
       "2": {
         "name": "(anonymous_2)",
         "decl": {
           "start": {
-            "line": 14,
+            "line": 11,
             "column": 13
           },
           "end": {
-            "line": 14,
+            "line": 11,
             "column": 14
           }
         },
         "loc": {
           "start": {
-            "line": 14,
+            "line": 11,
             "column": 21
           },
           "end": {
-            "line": 14,
+            "line": 11,
             "column": 28
           }
         },
-        "line": 14
+        "line": 11
       }
     },
     "branchMap": {
       "0": {
         "loc": {
           "start": {
-            "line": 11,
+            "line": 8,
             "column": 23
           },
           "end": {
-            "line": 11,
+            "line": 8,
             "column": 50
           }
         },
@@ -10163,26 +10163,26 @@
         "locations": [
           {
             "start": {
-              "line": 11,
+              "line": 8,
               "column": 30
             },
             "end": {
-              "line": 11,
+              "line": 8,
               "column": 45
             }
           },
           {
             "start": {
-              "line": 11,
+              "line": 8,
               "column": 48
             },
             "end": {
-              "line": 11,
+              "line": 8,
               "column": 50
             }
           }
         ],
-        "line": 11
+        "line": 8
       }
     },
     "s": {
@@ -10208,11 +10208,11 @@
       "sources": [
         "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/store/rtkApi.ts"
       ],
-      "mappings": "AAAA;AAAA,EACE;AAAA,EAIA;AAAA,OACK;AAQA,aAAM,UAAU,UAAU;AAAA,EAC/B,aAAa;AAAA,EACb,UAAU,CAAC,YAAY;AAAA,EAEvB,WAAW,eAAe,EAAE,SAAS,6CAA6C,CAAC;AAAA,EACnF,WAAW,CAAC,WAAW;AAAA,IACrB,UAAU,MAAM,MAAuC;AAAA,MACrD,OAAO,CAAC,SAAU,OAAO,SAAS,SAAS;AAAA,IAC7C,CAAC;AAAA,IACD,aAAa,MAAM,MAA0B;AAAA,MAC3C,OAAO,CAAC,OAAO,GAAG;AAAA,IACpB,CAAC;AAAA,EACH;AACF,CAAC;AAEM,aAAM,EAAE,kBAAkB,qBAAqB,wBAAwB,IAAI;",
+      "mappings": "AAAA,SAAS,gBAAgB,iBAAiB;AAGnC,aAAM,UAAU,UAAU;AAAA,EAC/B,aAAa;AAAA,EACb,UAAU,CAAC,YAAY;AAAA,EAEvB,WAAW,eAAe,EAAE,SAAS,6CAA6C,CAAC;AAAA,EACnF,WAAW,CAAC,WAAW;AAAA,IACrB,UAAU,MAAM,MAAuC;AAAA,MACrD,OAAO,CAAC,SAAU,OAAO,SAAS,SAAS;AAAA,IAC7C,CAAC;AAAA,IACD,aAAa,MAAM,MAA0B;AAAA,MAC3C,OAAO,CAAC,OAAO,GAAG;AAAA,IACpB,CAAC;AAAA,EACH;AACF,CAAC;AAEM,aAAM,EAAE,kBAAkB,qBAAqB,wBAAwB,IAAI;",
       "names": []
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "1f6afa170128eaa4636399c37ad951c0962803ee"
+    "hash": "3daf90894c85d41fa52a79b04fa229f7cc21458c"
   },
   "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/components/Modal/Modal.tsx": {
     "path": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/components/Modal/Modal.tsx",
@@ -12612,7 +12612,7 @@
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AASM;AATN,OAAOA,oBAAiB;AAAe;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACvC,OAAOC,eAAe;AACtB,OAAO;AACP,OAAOC,eAAe;AAEf,gBAASC,WAAW;AACzB,SACE,uBAAC,SAAI,WAAU,YAEb;AAAA,2BAAC,QAAG,qCAAJ;AAAA;AAAA;AAAA;AAAA,WAAyB;AAAA,IACzB,uBAAC,eAAD;AAAA;AAAA;AAAA;AAAA,WAAU;AAAA,IACV,uBAAC,YAAS,UAAU,uBAAC,OAAE,+BAAH;AAAA;AAAA;AAAA;AAAA,WAAkB,GACpC,iCAAC,eAAD;AAAA;AAAA;AAAA;AAAA,WAAU,KADZ;AAAA;AAAA;AAAA;AAAA,WAEA;AAAA,OANF;AAAA;AAAA;AAAA;AAAA,SAOA;AAEJ;AAACC,KAXeD;AAAQ;AAAAE",
+      "mappings": "AAQM;AARN,OAAOA,oBAAiB;AAAe;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACvC,OAAOC,eAAe;AACtB,OAAO;AACP,OAAOC,eAAe;AAEf,gBAASC,WAAW;AACzB,SACE,uBAAC,SAAI,WAAU,YACb;AAAA,2BAAC,QAAG,qCAAJ;AAAA;AAAA;AAAA;AAAA,WAAyB;AAAA,IACzB,uBAAC,eAAD;AAAA;AAAA;AAAA;AAAA,WAAU;AAAA,IACV,uBAAC,YAAS,UAAU,uBAAC,OAAE,+BAAH;AAAA;AAAA;AAAA;AAAA,WAAkB,GACpC,iCAAC,eAAD;AAAA;AAAA;AAAA;AAAA,WAAU,KADZ;AAAA;AAAA;AAAA;AAAA,WAEA;AAAA,OALF;AAAA;AAAA;AAAA;AAAA,SAMA;AAEJ;AAACC,KAVeD;AAAQ;AAAAE",
       "names": [
         "React",
         "SearchBar",
@@ -12627,7 +12627,7 @@
       "file": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/pages/MainPage.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "9f73724a18bb757c0890cb17428b31934e21fb78"
+    "hash": "b024c8792315866cfcc7bccc0db4b8bbe95b5e2c"
   },
   "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/pages/index.ts": {
     "path": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/pages/index.ts",
@@ -12759,43 +12759,11 @@
       "sources": [
         "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/store/index.ts"
       ],
-      "mappings": "AAAA,SAAyB,iBAAiB,sBAAsB;AAChE,OAAO,iBAAiB;AACxB,OAAO,mBAAmB;AAC1B,SAAS,eAAe;AACxB,MAAM,UAAU,gBAAgB;AAAA,EAC9B,MAAM;AAAA,EACN,QAAQ;AAAA,EACR,CAAC,QAAQ,WAAW,GAAG,QAAQ;AACjC,CAAC;AACM,gBAAS,WAAW,gBAA4C;AACrE,SAAO,eAAe;AAAA,IACpB;AAAA,IACA;AAAA,IACA,YAAY,CAAC,wBAAwB,oBAAoB,EAAE,OAAO,QAAQ,UAAU;AAAA,EACtF,CAAC;AACH;AAEA,MAAM,QAAQ,WAAW;AACzB,eAAe;",
+      "mappings": "AAAA,SAAyB,iBAAiB,sBAAsB;AAChE,OAAO,iBAAiB;AACxB,OAAO,mBAAmB;AAC1B,SAAS,eAAe;AAOxB,MAAM,UAAU,gBAAgB;AAAA,EAC9B,MAAM;AAAA,EACN,QAAQ;AAAA,EACR,CAAC,QAAQ,WAAW,GAAG,QAAQ;AACjC,CAAC;AACM,gBAAS,WAAW,gBAA4C;AACrE,SAAO,eAAe;AAAA,IACpB;AAAA,IACA;AAAA,IACA,YAAY,CAAC,wBAAwB,oBAAoB,EAAE,OAAO,QAAQ,UAAU;AAAA,EACtF,CAAC;AACH;AAEA,MAAM,QAAQ,WAAW;AACzB,eAAe;",
       "names": []
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "d4e9bdb8695bf8dae25035b65cb10ae09a5d749d"
-  },
-  "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/routes/index.ts": {
-    "path": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/routes/index.ts",
-    "statementMap": {
-      "0": {
-        "start": {
-          "line": 2,
-          "column": 15
-        },
-        "end": {
-          "line": 23,
-          "column": 1
-        }
-      }
-    },
-    "fnMap": {},
-    "branchMap": {},
-    "s": {
-      "0": 5
-    },
-    "f": {},
-    "b": {},
-    "inputSourceMap": {
-      "version": 3,
-      "sources": [
-        "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/routes/index.ts"
-      ],
-      "mappings": "AAAA,SAAS,UAAU,WAAW,WAAW,iBAAiB;AAE1D,MAAM,SAAS;AAAA,EACb;AAAA,IACE,MAAM;AAAA,IACN,MAAM;AAAA,IACN,SAAS;AAAA,EACX;AAAA,EACA;AAAA,IACE,MAAM;AAAA,IACN,MAAM;AAAA,IACN,SAAS;AAAA,EACX;AAAA,EACA;AAAA,IACE,MAAM;AAAA,IACN,MAAM;AAAA,IACN,SAAS;AAAA,EACX;AAAA,EACA;AAAA,IACE,MAAM;AAAA,IACN,MAAM;AAAA,IACN,SAAS;AAAA,EACX;AACF;AAEA,eAAe;",
-      "names": []
-    },
-    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "d7c4ab8437ea451c94c77540af096df2aebc1f5a"
+    "hash": "16ae5a65ed29120e435c30110c45af6550dd30ab"
   },
   "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/components/Header.tsx": {
     "path": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/components/Header.tsx",
@@ -12882,191 +12850,261 @@
       },
       "8": {
         "start": {
-          "line": 20,
-          "column": 20
+          "line": 16,
+          "column": 9
         },
         "end": {
-          "line": 22,
-          "column": 37
+          "line": 16,
+          "column": 23
         }
       },
       "9": {
         "start": {
-          "line": 22,
-          "column": 8
+          "line": 21,
+          "column": 2
         },
         "end": {
-          "line": 22,
-          "column": 37
+          "line": 21,
+          "column": 7
         }
       },
       "10": {
         "start": {
-          "line": 23,
-          "column": 2
+          "line": 22,
+          "column": 16
         },
         "end": {
-          "line": 47,
-          "column": 11
+          "line": 22,
+          "column": 29
         }
       },
       "11": {
         "start": {
-          "line": 30,
-          "column": 6
+          "line": 23,
+          "column": 15
         },
         "end": {
-          "line": 32,
-          "column": 7
+          "line": 23,
+          "column": 80
         }
       },
       "12": {
         "start": {
-          "line": 31,
-          "column": 8
+          "line": 23,
+          "column": 40
         },
         "end": {
-          "line": 31,
-          "column": 20
+          "line": 23,
+          "column": 66
         }
       },
       "13": {
         "start": {
-          "line": 33,
-          "column": 6
+          "line": 24,
+          "column": 20
         },
         "end": {
-          "line": 37,
-          "column": 15
+          "line": 26,
+          "column": 37
         }
       },
       "14": {
         "start": {
-          "line": 49,
-          "column": 0
+          "line": 26,
+          "column": 8
         },
         "end": {
-          "line": 49,
-          "column": 12
+          "line": 26,
+          "column": 37
         }
       },
       "15": {
         "start": {
-          "line": 51,
-          "column": 0
+          "line": 27,
+          "column": 2
         },
         "end": {
           "line": 51,
-          "column": 27
+          "column": 11
         }
       },
       "16": {
         "start": {
-          "line": 52,
-          "column": 0
+          "line": 34,
+          "column": 6
         },
         "end": {
-          "line": 68,
-          "column": 1
+          "line": 36,
+          "column": 7
         }
       },
       "17": {
         "start": {
-          "line": 53,
-          "column": 2
+          "line": 35,
+          "column": 8
         },
         "end": {
-          "line": 53,
-          "column": 39
+          "line": 35,
+          "column": 20
         }
       },
       "18": {
         "start": {
-          "line": 54,
-          "column": 2
+          "line": 37,
+          "column": 6
         },
         "end": {
-          "line": 54,
-          "column": 39
+          "line": 41,
+          "column": 15
         }
       },
       "19": {
         "start": {
-          "line": 55,
-          "column": 2
+          "line": 53,
+          "column": 0
         },
         "end": {
-          "line": 67,
-          "column": 5
+          "line": 55,
+          "column": 3
         }
       },
       "20": {
         "start": {
-          "line": 59,
-          "column": 4
+          "line": 54,
+          "column": 2
         },
         "end": {
-          "line": 59,
-          "column": 156
+          "line": 54,
+          "column": 23
         }
       },
       "21": {
         "start": {
-          "line": 60,
-          "column": 4
+          "line": 56,
+          "column": 0
         },
         "end": {
-          "line": 66,
-          "column": 7
+          "line": 56,
+          "column": 12
         }
       },
       "22": {
         "start": {
-          "line": 61,
-          "column": 6
+          "line": 58,
+          "column": 0
         },
         "end": {
-          "line": 62,
-          "column": 15
+          "line": 58,
+          "column": 27
         }
       },
       "23": {
         "start": {
-          "line": 62,
-          "column": 8
+          "line": 59,
+          "column": 0
         },
         "end": {
-          "line": 62,
-          "column": 15
+          "line": 75,
+          "column": 1
         }
       },
       "24": {
         "start": {
-          "line": 63,
-          "column": 32
+          "line": 60,
+          "column": 2
         },
         "end": {
-          "line": 63,
-          "column": 115
+          "line": 60,
+          "column": 39
         }
       },
       "25": {
         "start": {
-          "line": 64,
-          "column": 6
+          "line": 61,
+          "column": 2
         },
         "end": {
-          "line": 65,
-          "column": 54
+          "line": 61,
+          "column": 39
         }
       },
       "26": {
         "start": {
-          "line": 65,
+          "line": 62,
+          "column": 2
+        },
+        "end": {
+          "line": 74,
+          "column": 5
+        }
+      },
+      "27": {
+        "start": {
+          "line": 66,
+          "column": 4
+        },
+        "end": {
+          "line": 66,
+          "column": 156
+        }
+      },
+      "28": {
+        "start": {
+          "line": 67,
+          "column": 4
+        },
+        "end": {
+          "line": 73,
+          "column": 7
+        }
+      },
+      "29": {
+        "start": {
+          "line": 68,
+          "column": 6
+        },
+        "end": {
+          "line": 69,
+          "column": 15
+        }
+      },
+      "30": {
+        "start": {
+          "line": 69,
           "column": 8
         },
         "end": {
-          "line": 65,
+          "line": 69,
+          "column": 15
+        }
+      },
+      "31": {
+        "start": {
+          "line": 70,
+          "column": 32
+        },
+        "end": {
+          "line": 70,
+          "column": 115
+        }
+      },
+      "32": {
+        "start": {
+          "line": 71,
+          "column": 6
+        },
+        "end": {
+          "line": 72,
+          "column": 54
+        }
+      },
+      "33": {
+        "start": {
+          "line": 72,
+          "column": 8
+        },
+        "end": {
+          "line": 72,
           "column": 54
         }
       }
@@ -13100,121 +13138,169 @@
         "name": "Header",
         "decl": {
           "start": {
-            "line": 19,
+            "line": 20,
             "column": 24
           },
           "end": {
-            "line": 19,
+            "line": 20,
             "column": 30
           }
         },
         "loc": {
           "start": {
-            "line": 19,
+            "line": 20,
             "column": 33
           },
           "end": {
-            "line": 48,
+            "line": 52,
             "column": 1
           }
         },
-        "line": 19
+        "line": 20
       },
       "2": {
         "name": "(anonymous_2)",
         "decl": {
           "start": {
-            "line": 20,
-            "column": 20
+            "line": 23,
+            "column": 32
           },
           "end": {
-            "line": 20,
-            "column": 21
+            "line": 23,
+            "column": 33
           }
         },
         "loc": {
           "start": {
-            "line": 22,
-            "column": 8
+            "line": 23,
+            "column": 40
           },
           "end": {
-            "line": 22,
-            "column": 37
+            "line": 23,
+            "column": 66
           }
         },
-        "line": 22
+        "line": 23
       },
       "3": {
         "name": "(anonymous_3)",
         "decl": {
           "start": {
-            "line": 29,
-            "column": 85
+            "line": 24,
+            "column": 20
           },
           "end": {
-            "line": 29,
-            "column": 86
+            "line": 24,
+            "column": 21
           }
         },
         "loc": {
           "start": {
-            "line": 29,
-            "column": 93
+            "line": 26,
+            "column": 8
           },
           "end": {
-            "line": 38,
-            "column": 5
+            "line": 26,
+            "column": 37
           }
         },
-        "line": 29
+        "line": 26
       },
       "4": {
         "name": "(anonymous_4)",
         "decl": {
           "start": {
-            "line": 58,
-            "column": 9
+            "line": 33,
+            "column": 90
           },
           "end": {
-            "line": 58,
-            "column": 10
+            "line": 33,
+            "column": 91
           }
         },
         "loc": {
           "start": {
-            "line": 58,
-            "column": 29
+            "line": 33,
+            "column": 98
           },
           "end": {
-            "line": 67,
-            "column": 3
+            "line": 42,
+            "column": 5
           }
         },
-        "line": 58
+        "line": 33
       },
       "5": {
         "name": "(anonymous_5)",
         "decl": {
           "start": {
-            "line": 60,
+            "line": 53,
+            "column": 50
+          },
+          "end": {
+            "line": 53,
+            "column": 51
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 53,
+            "column": 61
+          },
+          "end": {
+            "line": 55,
+            "column": 1
+          }
+        },
+        "line": 53
+      },
+      "6": {
+        "name": "(anonymous_6)",
+        "decl": {
+          "start": {
+            "line": 65,
+            "column": 9
+          },
+          "end": {
+            "line": 65,
+            "column": 10
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 65,
+            "column": 29
+          },
+          "end": {
+            "line": 74,
+            "column": 3
+          }
+        },
+        "line": 65
+      },
+      "7": {
+        "name": "(anonymous_7)",
+        "decl": {
+          "start": {
+            "line": 67,
             "column": 27
           },
           "end": {
-            "line": 60,
+            "line": 67,
             "column": 28
           }
         },
         "loc": {
           "start": {
-            "line": 60,
+            "line": 67,
             "column": 44
           },
           "end": {
-            "line": 66,
+            "line": 73,
             "column": 5
           }
         },
-        "line": 60
+        "line": 67
       }
     },
     "branchMap": {
@@ -13281,11 +13367,47 @@
       "2": {
         "loc": {
           "start": {
-            "line": 22,
+            "line": 23,
+            "column": 15
+          },
+          "end": {
+            "line": 23,
+            "column": 80
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 23,
+              "column": 15
+            },
+            "end": {
+              "line": 23,
+              "column": 73
+            }
+          },
+          {
+            "start": {
+              "line": 23,
+              "column": 77
+            },
+            "end": {
+              "line": 23,
+              "column": 80
+            }
+          }
+        ],
+        "line": 23
+      },
+      "3": {
+        "loc": {
+          "start": {
+            "line": 26,
             "column": 8
           },
           "end": {
-            "line": 22,
+            "line": 26,
             "column": 37
           }
         },
@@ -13293,35 +13415,35 @@
         "locations": [
           {
             "start": {
-              "line": 22,
+              "line": 26,
               "column": 19
             },
             "end": {
-              "line": 22,
+              "line": 26,
               "column": 32
             }
           },
           {
             "start": {
-              "line": 22,
+              "line": 26,
               "column": 35
             },
             "end": {
-              "line": 22,
+              "line": 26,
               "column": 37
             }
           }
         ],
-        "line": 22
+        "line": 26
       },
-      "3": {
+      "4": {
         "loc": {
           "start": {
-            "line": 30,
+            "line": 34,
             "column": 6
           },
           "end": {
-            "line": 32,
+            "line": 36,
             "column": 7
           }
         },
@@ -13329,11 +13451,11 @@
         "locations": [
           {
             "start": {
-              "line": 30,
+              "line": 34,
               "column": 6
             },
             "end": {
-              "line": 32,
+              "line": 36,
               "column": 7
             }
           },
@@ -13342,16 +13464,16 @@
             "end": {}
           }
         ],
-        "line": 30
+        "line": 34
       },
-      "4": {
+      "5": {
         "loc": {
           "start": {
-            "line": 52,
+            "line": 59,
             "column": 0
           },
           "end": {
-            "line": 68,
+            "line": 75,
             "column": 1
           }
         },
@@ -13359,11 +13481,11 @@
         "locations": [
           {
             "start": {
-              "line": 52,
+              "line": 59,
               "column": 0
             },
             "end": {
-              "line": 68,
+              "line": 75,
               "column": 1
             }
           },
@@ -13372,16 +13494,16 @@
             "end": {}
           }
         ],
-        "line": 52
+        "line": 59
       },
-      "5": {
+      "6": {
         "loc": {
           "start": {
-            "line": 61,
+            "line": 68,
             "column": 6
           },
           "end": {
-            "line": 62,
+            "line": 69,
             "column": 15
           }
         },
@@ -13389,11 +13511,11 @@
         "locations": [
           {
             "start": {
-              "line": 61,
+              "line": 68,
               "column": 6
             },
             "end": {
-              "line": 62,
+              "line": 69,
               "column": 15
             }
           },
@@ -13402,16 +13524,16 @@
             "end": {}
           }
         ],
-        "line": 61
+        "line": 68
       },
-      "6": {
+      "7": {
         "loc": {
           "start": {
-            "line": 64,
+            "line": 71,
             "column": 6
           },
           "end": {
-            "line": 65,
+            "line": 72,
             "column": 54
           }
         },
@@ -13419,11 +13541,11 @@
         "locations": [
           {
             "start": {
-              "line": 64,
+              "line": 71,
               "column": 6
             },
             "end": {
-              "line": 65,
+              "line": 72,
               "column": 54
             }
           },
@@ -13432,7 +13554,7 @@
             "end": {}
           }
         ],
-        "line": 64
+        "line": 71
       }
     },
     "s": {
@@ -13444,33 +13566,42 @@
       "5": 5,
       "6": 5,
       "7": 5,
-      "8": 4,
-      "9": 12,
+      "8": 5,
+      "9": 4,
       "10": 4,
-      "11": 16,
-      "12": 4,
-      "13": 12,
-      "14": 5,
-      "15": 5,
-      "16": 5,
-      "17": 5,
-      "18": 5,
+      "11": 4,
+      "12": 9,
+      "13": 4,
+      "14": 12,
+      "15": 4,
+      "16": 16,
+      "17": 4,
+      "18": 12,
       "19": 5,
-      "20": 2,
-      "21": 2,
-      "22": 0,
-      "23": 0,
-      "24": 0,
-      "25": 0,
-      "26": 0
+      "20": 4,
+      "21": 5,
+      "22": 5,
+      "23": 5,
+      "24": 5,
+      "25": 5,
+      "26": 5,
+      "27": 2,
+      "28": 2,
+      "29": 0,
+      "30": 0,
+      "31": 0,
+      "32": 0,
+      "33": 0
     },
     "f": {
       "0": 5,
       "1": 4,
-      "2": 12,
-      "3": 16,
-      "4": 2,
-      "5": 0
+      "2": 9,
+      "3": 12,
+      "4": 16,
+      "5": 4,
+      "6": 2,
+      "7": 0
     },
     "b": {
       "0": [
@@ -13483,39 +13614,47 @@
       ],
       "2": [
         4,
-        8
+        0
       ],
       "3": [
         4,
-        12
+        8
       ],
       "4": [
+        4,
+        12
+      ],
+      "5": [
         5,
         0
       ],
-      "5": [
+      "6": [
         0,
         0
       ],
-      "6": [
+      "7": [
         0,
         0
       ]
     },
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AASM;AATN,OAAOA,oBAAkB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACzB,SAASC,eAAe;AACxB,OAAO;AACP,OAAOC,YAAY;AAEnB,wBAAwBC,SAAS;AAC/B,QAAMC,YAAYA,CAAC;AAAA,IAAEC;AAAAA,EAAgC,MAAOA,WAAW,gBAAgB;AACvF,SACE,uBAAC,YAAO,WAAU,UAChB;AAAA,2BAAC,SAAI,WAAU,QAAO,iBAAtB;AAAA;AAAA;AAAA;AAAA,WAAuB;AAAA,IACvB,uBAAC,SAAI,WAAU,iBACZH,iBAAOI,IAAKC,QAAO;AAClB,UAAIA,GAAGC,SAAS,KAAK;AACnB,eAAO;AAAA,MACT;AACA,aACE,uBAAC,WAAQ,IAAID,GAAGC,MAAM,WAAWJ,WAC9BG,aAAGE,QAD2CF,GAAGE,MAApD;AAAA;AAAA;AAAA;AAAA,aAEA;AAAA,IAEJ,CAAC,KAVH;AAAA;AAAA;AAAA;AAAA,WAWA;AAAA,OAbF;AAAA;AAAA;AAAA;AAAA,SAcA;AAEJ;AAACC,KAnBuBP;AAAM;AAAAQ",
+      "mappings": "AAaM;;;;;;;;;;;;;;;;AAZN,SAASA,SAASC,mBAAmB;AACrC,OAAO;AACP,SAASC,mBAAmB;AAE5B,wBAAwBC,SAAS;AAAAC;AAC/B,QAAMC,QAAQJ,YAAW;AACzB,QAAMK,OAAOJ,YAAYK,KAAMC,QAAOA,GAAGC,SAASJ,MAAMK,QAAQ,GAAGJ,QAAQ;AAE3E,QAAMK,YAAYA,CAAC;AAAA,IAAEC;AAAAA,EAAgC,MAAOA,WAAW,gBAAgB;AAEvF,SACE,uBAAC,YAAO,WAAU,UAChB;AAAA,2BAAC,SAAI,WAAU,QAAQN,kBAAvB;AAAA;AAAA;AAAA;AAAA,WAA4B;AAAA,IAC5B,uBAAC,SAAI,WAAU,iBACZJ,sBAAYW,IAAKL,QAAO;AACvB,UAAIA,GAAGC,SAAS,KAAK;AACnB,eAAO;AAAA,MACT;AACA,aACE,uBAAC,WAAQ,IAAID,GAAGC,MAAM,WAAWE,WAC9BH,aAAGF,QAD2CE,GAAGF,MAApD;AAAA;AAAA;AAAA;AAAA,aAEA;AAAA,IAEJ,CAAC,KAVH;AAAA;AAAA;AAAA;AAAA,WAWA;AAAA,OAbF;AAAA;AAAA;AAAA;AAAA,SAcA;AAEJ;AAACF,GAvBuBD,QAAM;AAAA,UACdF,WAAW;AAAA;AAAAa,KADHX;AAAM;AAAAY",
       "names": [
-        "React",
         "NavLink",
-        "routes",
+        "useLocation",
+        "routerPaths",
         "Header",
+        "_s",
+        "route",
+        "name",
+        "find",
+        "el",
+        "path",
+        "pathname",
         "setActive",
         "isActive",
         "map",
-        "el",
-        "path",
-        "name",
         "_c",
         "$RefreshReg$"
       ],
@@ -13525,7 +13664,7 @@
       "file": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/components/Header.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "aba592bc577586942a375d3d1b1210714718f311"
+    "hash": "b8fe399374718faa8b3600d3ad5b8c77703b436d"
   },
   "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/App.tsx": {
     "path": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/App.tsx",
@@ -14073,8 +14212,8 @@
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
     "hash": "f790ba92c829164a444dc0e09e2475548e783b7c"
   },
-  "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/routes/test.tsx": {
-    "path": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/routes/test.tsx",
+  "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/routes/index.tsx": {
+    "path": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/routes/index.tsx",
     "statementMap": {
       "0": {
         "start": {
@@ -14089,224 +14228,25 @@
       "1": {
         "start": {
           "line": 41,
-          "column": 14
-        },
-        "end": {
-          "line": 41,
-          "column": 63
-        }
-      },
-      "2": {
-        "start": {
-          "line": 41,
           "column": 27
         },
         "end": {
-          "line": 41,
-          "column": 63
-        }
-      },
-      "3": {
-        "start": {
-          "line": 41,
-          "column": 46
-        },
-        "end": {
-          "line": 41,
-          "column": 62
-        }
-      },
-      "4": {
-        "start": {
-          "line": 42,
-          "column": 13
-        },
-        "end": {
-          "line": 42,
-          "column": 50
-        }
-      },
-      "5": {
-        "start": {
-          "line": 42,
-          "column": 19
-        },
-        "end": {
-          "line": 42,
-          "column": 50
-        }
-      },
-      "6": {
-        "start": {
-          "line": 44,
+          "line": 53,
           "column": 2
-        },
-        "end": {
-          "line": 44,
-          "column": 16
-        }
-      },
-      "7": {
-        "start": {
-          "line": 45,
-          "column": 2
-        },
-        "end": {
-          "line": 47,
-          "column": 4
         }
       }
     },
-    "fnMap": {
-      "0": {
-        "name": "(anonymous_0)",
-        "decl": {
-          "start": {
-            "line": 41,
-            "column": 14
-          },
-          "end": {
-            "line": 41,
-            "column": 15
-          }
-        },
-        "loc": {
-          "start": {
-            "line": 41,
-            "column": 27
-          },
-          "end": {
-            "line": 41,
-            "column": 63
-          }
-        },
-        "line": 41
-      },
-      "1": {
-        "name": "(anonymous_1)",
-        "decl": {
-          "start": {
-            "line": 41,
-            "column": 39
-          },
-          "end": {
-            "line": 41,
-            "column": 40
-          }
-        },
-        "loc": {
-          "start": {
-            "line": 41,
-            "column": 46
-          },
-          "end": {
-            "line": 41,
-            "column": 62
-          }
-        },
-        "line": 41
-      },
-      "2": {
-        "name": "(anonymous_2)",
-        "decl": {
-          "start": {
-            "line": 42,
-            "column": 13
-          },
-          "end": {
-            "line": 42,
-            "column": 14
-          }
-        },
-        "loc": {
-          "start": {
-            "line": 42,
-            "column": 19
-          },
-          "end": {
-            "line": 42,
-            "column": 50
-          }
-        },
-        "line": 42
-      },
-      "3": {
-        "name": "mainLoader",
-        "decl": {
-          "start": {
-            "line": 43,
-            "column": 15
-          },
-          "end": {
-            "line": 43,
-            "column": 25
-          }
-        },
-        "loc": {
-          "start": {
-            "line": 43,
-            "column": 28
-          },
-          "end": {
-            "line": 48,
-            "column": 1
-          }
-        },
-        "line": 43
-      }
-    },
-    "branchMap": {
-      "0": {
-        "loc": {
-          "start": {
-            "line": 41,
-            "column": 15
-          },
-          "end": {
-            "line": 41,
-            "column": 22
-          }
-        },
-        "type": "default-arg",
-        "locations": [
-          {
-            "start": {
-              "line": 41,
-              "column": 19
-            },
-            "end": {
-              "line": 41,
-              "column": 22
-            }
-          }
-        ],
-        "line": 41
-      }
-    },
+    "fnMap": {},
+    "branchMap": {},
     "s": {
       "0": 5,
-      "1": 5,
-      "2": 0,
-      "3": 0,
-      "4": 5,
-      "5": 0,
-      "6": 0,
-      "7": 0
+      "1": 5
     },
-    "f": {
-      "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 0
-    },
-    "b": {
-      "0": [
-        0
-      ]
-    },
+    "f": {},
+    "b": {},
     "inputSourceMap": {
       "version": 3,
-      "mappings": "AAQa;AAPb,SAASA,UAAUC,WAAWC,WAAWC,iBAAiB;AAE1D,OAAOC,SAAS;AAEhB,MAAMC,SAAwB,CAC5B;AAAA,EACEC,MAAM;AAAA,EACNC,SAAS,uBAAC,SAAD;AAAA;AAAA;AAAA;AAAA,SAAI;AAAA,EACbC,UAAU,CACR;AAAA,IACEC,OAAO;AAAA,IACPF,SAAS,uBAAC,cAAD;AAAA;AAAA;AAAA;AAAA,WAAS;AAAA,EACpB,GACA;AAAA,IACED,MAAM;AAAA,IACNC,SAAS,uBAAC,eAAD;AAAA;AAAA;AAAA;AAAA,WAAU;AAAA,EACrB,GACA;AAAA,IACED,MAAM;AAAA,IACNC,SAAS,uBAAC,eAAD;AAAA;AAAA;AAAA;AAAA,WAAU;AAAA,EACrB,CAAC;AAEL,GACA;AAAA,EACED,MAAM;AAAA,EACNC,SAAS,uBAAC,eAAD;AAAA;AAAA;AAAA;AAAA,SAAU;AACrB,CAAC;AAGH,MAAMG,QAAQA,CAACC,IAAI,QAAQ,IAAIC,QAASC,OAAMC,WAAWD,GAAGF,CAAC,CAAC;AAC9D,MAAMI,OAAOA,MAAMC,KAAKC,MAAMD,KAAKE,OAAM,IAAK,GAAG;AAEjD,eAAeC,aAAa;AAC1B,QAAMT,MAAK;AACX,SAAO;AAAA,IAAEU,MAAO,8BAA6BL,KAAI;AAAA,EAAK;AACxD;AAEA,eAAeV",
+      "mappings": "AAQa;AAPb,SAASA,UAAUC,WAAWC,WAAWC,iBAAiB;AAE1D,OAAOC,SAAS;AAEhB,MAAMC,SAAwB,CAC5B;AAAA,EACEC,MAAM;AAAA,EACNC,SAAS,uBAAC,SAAD;AAAA;AAAA;AAAA;AAAA,SAAI;AAAA,EACbC,UAAU,CACR;AAAA,IACEC,OAAO;AAAA,IACPF,SAAS,uBAAC,cAAD;AAAA;AAAA;AAAA;AAAA,WAAS;AAAA,EACpB,GACA;AAAA,IACED,MAAM;AAAA,IACNC,SAAS,uBAAC,eAAD;AAAA;AAAA;AAAA;AAAA,WAAU;AAAA,EACrB,GACA;AAAA,IACED,MAAM;AAAA,IACNC,SAAS,uBAAC,eAAD;AAAA;AAAA;AAAA;AAAA,WAAU;AAAA,EACrB,CAAC;AAEL,GACA;AAAA,EACED,MAAM;AAAA,EACNC,SAAS,uBAAC,eAAD;AAAA;AAAA;AAAA;AAAA,SAAU;AACrB,CAAC;AAGI,aAAMG,cAAc,CACzB;AAAA,EACEC,MAAM;AAAA,EACNL,MAAM;AACR,GACA;AAAA,EACEK,MAAM;AAAA,EACNL,MAAM;AACR,GACA;AAAA,EACEK,MAAM;AAAA,EACNL,MAAM;AACR,GACA;AAAA,EACEK,MAAM;AAAA,EACNL,MAAM;AACR,CAAC;AAGH,eAAeD",
       "names": [
         "MainPage",
         "AboutPage",
@@ -14318,25 +14258,16 @@
         "element",
         "children",
         "index",
-        "sleep",
-        "n",
-        "Promise",
-        "r",
-        "setTimeout",
-        "rand",
-        "Math",
-        "round",
-        "random",
-        "mainLoader",
-        "data"
+        "routerPaths",
+        "name"
       ],
       "sources": [
-        "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/routes/test.tsx"
+        "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/routes/index.tsx"
       ],
-      "file": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/routes/test.tsx"
+      "file": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/routes/index.tsx"
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "5bbc38319a4e0a47b0226ea4651940d4617afe89"
+    "hash": "26b1243bd3ccd935a3cc366f31d0f994e4d9ff1b"
   },
   "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/entry-client.tsx": {
     "path": "C:/Users/lesha/OneDrive/Документы/VSCode/react/RSSchoolReact/src/entry-client.tsx",
