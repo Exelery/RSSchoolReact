@@ -3,6 +3,7 @@ import fsp from 'fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
+import { Response } from 'node-fetch';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = 5173;

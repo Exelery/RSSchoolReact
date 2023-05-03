@@ -1,10 +1,13 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import {
+  StaticHandlerContext,
   StaticRouterProvider,
   createStaticHandler,
   createStaticRouter,
 } from 'react-router-dom/server';
 import { RenderToPipeableStreamOptions, renderToPipeableStream } from 'react-dom/server';
 import type * as express from 'express';
+import { Headers, Request, Response } from 'node-fetch';
 
 import React from 'react';
 import routes from './routes';
@@ -12,7 +15,8 @@ import routes from './routes';
 export async function render(request: express.Request, opt?: RenderToPipeableStreamOptions) {
   const { query, dataRoutes } = createStaticHandler(routes);
   const remixRequest = createFetchRequest(request);
-  const context = await query(remixRequest);
+  // @ts-expect-error
+  const context = (await query(remixRequest)) as StaticHandlerContext;
   if (context instanceof Response) {
     throw context;
   }
@@ -52,8 +56,8 @@ export function createFetchRequest(req: express.Request): Request {
   };
 
   if (req.method !== 'GET' && req.method !== 'HEAD') {
-    init.body = req.body;
+    init.body = JSON.stringify(req.body);
   }
-
+  // @ts-expect-error
   return new Request(url.href, init);
 }
